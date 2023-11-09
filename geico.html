@@ -1,0 +1,265 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Geico</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'homepage')"
+        >
+          <h2><b>HomePage</b></h2>
+        </button>
+      </div>
+
+      <!-------------------Geico SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none">
+        <label
+          class="text"
+          id="label_TextInputZipComponent-1"
+          for="TextInputZipComponent-1"
+          >Mailing Zip Code</label
+        >
+        <input
+          size="15"
+          type="tel"
+          class="zip-code-input"
+          id="TextInputZipComponent-1"
+          name="zipCode"
+          maxlength="5"
+          placeholder="E.g. 12345"
+        />
+      </div>
+
+      <!-----------------------Geico Sign In-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <label
+          class="text"
+          id="label_TextInputComponent-1"
+          for="TextInputComponent-1"
+          >User ID / Email / Policy Number</label
+        >
+        <input
+          id="TextInputComponent-1"
+          type="text"
+          placeholder=""
+          name="alternateUsername"
+          size="30"
+          maxlength="100"
+          class="ng-pristine ng-valid pxi-hint ng-touched"
+        /><br />
+        <label
+          class="text"
+          id="label_TextInputComponent-2"
+          for="TextInputComponent-2"
+          >Password</label
+        >
+        <input
+          id="TextInputComponent-2"
+          type="password"
+          placeholder=""
+          name="password"
+          size="30"
+          maxlength="35"
+          class="ng-untouched ng-pristine ng-valid"
+        />
+      </div>
+
+      <!------------------------Geico Forgot Password-------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        <label
+          class="text"
+          id="label_TextInputComponent-1"
+          for="TextInputComponent-1"
+          >EmailAddress</label
+        >
+        <input
+          id="TextInputComponent-3"
+          type="email"
+          placeholder=""
+          name="emailAddress"
+          size="30"
+          maxlength="45"
+          class="ng-untouched ng-pristine ng-valid pxi-hint"
+        />
+      </div>
+
+      <!------------------------Geico Checkout Information-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+        <div class="form-field form-field--error">
+          <label
+            for="Id_GiveInitialZipCode_30072"
+            id="Id_GiveInitialZipCode_30072-label"
+            class="text"
+            tabindex="-1"
+            ><span>5-Digit ZIP Code</span></label
+          ><input
+            aria-invalid="true"
+            id="Id_GiveInitialZipCode_30072"
+            name="Id_GiveInitialZipCode_30072"
+            autocomplete="off"
+            type="text"
+            maxlength="5"
+            size="6"
+            aria-label="5-Digit ZIP Code"
+            data-formotivid="Zip"
+            data-qm-encrypt="false"
+            data-qm-mask="false"
+            value=""
+            aria-describedby="form-message-error-Id_GiveInitialZipCode_30072"
+          />
+        </div>
+
+        <div class="form-field form-field--error">
+          <label
+            for="Id_GiveFirstName_99100"
+            id="Id_GiveFirstName_99100-label"
+            class="text"
+            tabindex="-1"
+            ><span>First Name</span></label
+          ><input
+            aria-invalid="true"
+            id="Id_GiveFirstName_99100"
+            name="Id_GiveFirstName_99100"
+            autocomplete="off"
+            type="text"
+            maxlength="20"
+            size="21"
+            aria-label="First Name"
+            data-formotivid="GiveFirstName"
+            data-qm-encrypt="true"
+            data-qm-mask="false"
+            value=""
+            aria-describedby="form-message-error-Id_GiveFirstName_99100"
+          />
+        </div>
+        <div class="form-field">
+          <label
+            for="Id_GiveLastName_35236"
+            id="Id_GiveLastName_35236-label"
+            class="text"
+            tabindex="-1"
+            ><span>Last Name</span></label
+          ><input
+            aria-invalid="false"
+            id="Id_GiveLastName_35236"
+            name="Id_GiveLastName_35236"
+            autocomplete="off"
+            type="text"
+            maxlength="20"
+            size="21"
+            aria-label="Last Name"
+            data-formotivid="GiveLastName"
+            data-qm-encrypt="true"
+            data-qm-mask="false"
+            value=""
+          />
+        </div>
+        <input
+          aria-invalid="false"
+          aria-labelledby="Id_GiveStreet_28697-label"
+          id="Id_GiveStreet_28697"
+          class="address-search-field pac-target-input"
+          name="autocomplete"
+          type="text"
+          size="46"
+          maxlength="45"
+          placeholder="Enter a location"
+          autocomplete="off"
+          data-formotivid="StreetAddress1"
+          data-qm-encrypt="true"
+          data-qm-mask="false"
+          value=""
+        />
+        <div class="form-field">
+          <label
+            for="Id_GiveUnitNumber_40601"
+            id="Id_GiveUnitNumber_40601-label"
+            class="text"
+            tabindex="-1"
+            ><span>Apt #</span></label
+          ><input
+            aria-invalid="false"
+            id="Id_GiveUnitNumber_40601"
+            name="Id_GiveUnitNumber_40601"
+            autocomplete="off"
+            type="text"
+            maxlength="6"
+            size="7"
+            aria-label="Apt #"
+            data-formotivid="UnitNumber"
+            data-qm-encrypt="true"
+            data-qm-mask="false"
+            value=""
+          />
+        </div>
+      </div>
+
+      <!------------------------Geico HomePage Information-------------------->
+
+      <div id="homepage" class="sub-field" style="display: none">
+        <input
+          id="ssp-service-zip"
+          class="zip-code-input"
+          type="tel"
+          pattern="[0-9]{5}"
+          maxlength="5"
+          aria-label="5-Digit ZIP Code"
+          placeholder="5-Digit ZIP Code"
+          name="POL_ratedZip5"
+          style="display: block !important"
+        />
+      </div>
+    </div>
+  </body>
+</html>

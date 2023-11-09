@@ -1,0 +1,566 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body>
+    <br /><br />
+    <h1>
+      <center>
+        <p class="center"><b>NewYork Times</b></p>
+      </center>
+    </h1>
+    <br />
+    <div id="goodeggs" class="field">
+      <div id="tab">
+        <div id="field">
+          <button
+            class="subtab tablinks titlecontent"
+            onclick="openSubComponent(event, 'newyorktimessigninandsignup')"
+          >
+            <h2><b>SignIn And SignUp</b></h2>
+          </button>
+
+          <button
+            class="subtab tablinks titlecontent"
+            onclick="openSubComponent(event, 'newyorktimescheckout')"
+          >
+            <h2><b>Checkout</b></h2>
+          </button>
+
+          <button
+            class="subtab tablinks titlecontent"
+            onclick="openSubComponent(event, 'newyorktimesforgotpassword')"
+          >
+            <h2><b>Forgot Password</b></h2>
+          </button>
+        </div>
+        <br />
+
+        <!---------------------------------New York Times Sign In And Sign Up---------------------------------------->
+
+        <div
+          id="newyorktimessigninandsignup"
+          class="sub-field"
+          style="display: none"
+        >
+          <h5>**SignIn and Signup Having Same Fields**</h5>
+
+          <label for="email" class="css-sfogtm-InputLabel e1e6zg660"
+            >Email Address</label
+          >
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder=""
+            maxlength="64"
+            autocapitalize="off"
+            autocomplete="username"
+            tabindex="0"
+            aria-hidden="false"
+            class="css-11g480x-InputBox e1e6zg665"
+            value=""
+          /><br />
+          <label for="password" class="css-sfogtm-InputLabel e1e6zg660"
+            >Password</label
+          >
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder=""
+            maxlength="255"
+            autocapitalize="off"
+            autocomplete="off"
+            tabindex="0"
+            aria-hidden="false"
+            class="css-e478v4-InputBox e1e6zg665"
+            value=""
+          />
+        </div>
+
+        <!-------------------------------New York Times Forgot Password--------------------------------------------->
+
+        <div
+          id="newyorktimesforgotpassword"
+          class="sub-field"
+          style="display: none"
+        >
+          <label for="email" class="css-sfogtm-InputLabel e1e6zg660"
+            >Email Address</label
+          >
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder=""
+            maxlength="64"
+            autocapitalize="off"
+            autocomplete="off"
+            tabindex="0"
+            aria-hidden="false"
+            class="css-11g480x-InputBox e1e6zg665"
+            value=""
+          />
+        </div>
+
+        <!-------------------------------New York Times Checkout------------------------------------------------------>
+
+        <div id="newyorktimescheckout" class="sub-field" style="display: none">
+          <label for="email" class="css-sfogtm-InputLabel e1e6zg660"
+            >Email Address</label
+          >
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder=""
+            maxlength="64"
+            autocapitalize="off"
+            autocomplete="username"
+            tabindex="0"
+            aria-hidden="false"
+            class="css-11g480x-InputBox e1e6zg665"
+            value=""
+          /><br />
+          <label for="password" class="css-sfogtm-InputLabel e1e6zg660"
+            >Password</label
+          >
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder=""
+            maxlength="255"
+            autocapitalize="off"
+            autocomplete="off"
+            tabindex="0"
+            aria-hidden="false"
+            class="css-e478v4-InputBox e1e6zg665"
+            value=""
+          /><br /><br />
+
+          <!-------------------------------Payment Details---------------------------------->
+
+          <form id="redesign-continue-form">
+            <div class="css-19idom"></div>
+            <div class="css-2kbh14">
+              <b>Credit or Debit Card </b><br />
+
+              <label for="firstName">First Name</label
+              ><input
+                class="css-itk919"
+                name="firstName"
+                id="firstName"
+                data-testid="new-card-first-name-field"
+                type="text"
+                aria-invalid="false"
+                placeholder=""
+                value=""
+              />
+
+              <label for="lastName">Last Name</label
+              ><input
+                class="css-itk919"
+                name="lastName"
+                id="lastName"
+                data-testid="new-card-last-name-field"
+                type="text"
+                aria-invalid="false"
+                placeholder=""
+                value=""
+              /><br />
+
+              <input
+                autocomplete="cc-number"
+                type="tel"
+                autocorrect="off"
+                autocapitalize="none"
+                spellcheck="false"
+                class="number"
+                data-braintree-name="number"
+                name="credit-card-number"
+                id="credit-card-number"
+                maxlength="22"
+                placeholder="Card Number"
+                aria-describedby="field-description-number"
+              />
+              <input
+                autocomplete="cc-exp"
+                type="tel"
+                autocorrect="off"
+                autocapitalize="none"
+                spellcheck="false"
+                class="expirationDate"
+                data-braintree-name="expirationDate"
+                name="expiration"
+                id="expiration"
+                maxlength="9"
+                placeholder="MM/YY"
+                aria-describedby="field-description-expirationDate"
+              />
+              <input
+                autocomplete="cc-csc"
+                type="tel"
+                autocorrect="off"
+                autocapitalize="none"
+                spellcheck="false"
+                class="cvv"
+                data-braintree-name="cvv"
+                name="cvv"
+                id="cvv"
+                placeholder="CVC"
+                maxlength="4"
+                aria-describedby="field-description-cvv"
+              />
+              <br />
+              <select
+                class="css-jjzumv"
+                name="country"
+                id="country"
+                data-testid="new-card-country-dropdown"
+              >
+                <option class="css-1c25wav" value="US">United States</option>
+                <option class="css-1c25wav" value="AF">Afghanistan</option>
+                <option class="css-1c25wav" value="AL">Albania</option>
+                <option class="css-1c25wav" value="DZ">Algeria</option>
+                <option class="css-1c25wav" value="AS">American Samoa</option>
+                <option class="css-1c25wav" value="AD">Andorra</option>
+                <option class="css-1c25wav" value="AO">Angola</option>
+                <option class="css-1c25wav" value="AI">Anguilla</option>
+                <option class="css-1c25wav" value="AQ">Antarctica</option>
+                <option class="css-1c25wav" value="AG">
+                  Antigua and Barbuda
+                </option>
+                <option class="css-1c25wav" value="AR">Argentina</option>
+                <option class="css-1c25wav" value="AM">Armenia</option>
+                <option class="css-1c25wav" value="AW">Aruba</option>
+                <option class="css-1c25wav" value="AU">Australia</option>
+                <option class="css-1c25wav" value="AT">Austria</option>
+                <option class="css-1c25wav" value="AZ">Azerbaijan</option>
+                <option class="css-1c25wav" value="BS">Bahamas</option>
+                <option class="css-1c25wav" value="BH">Bahrain</option>
+                <option class="css-1c25wav" value="BD">Bangladesh</option>
+                <option class="css-1c25wav" value="BB">Barbados</option>
+                <option class="css-1c25wav" value="BY">Belarus</option>
+                <option class="css-1c25wav" value="BE">Belgium</option>
+                <option class="css-1c25wav" value="BZ">Belize</option>
+                <option class="css-1c25wav" value="BJ">Benin</option>
+                <option class="css-1c25wav" value="BM">Bermuda</option>
+                <option class="css-1c25wav" value="BT">Bhutan</option>
+                <option class="css-1c25wav" value="BO">Bolivia</option>
+                <option class="css-1c25wav" value="BA">
+                  Bosnia and Herzegowina
+                </option>
+                <option class="css-1c25wav" value="BW">Botswana</option>
+                <option class="css-1c25wav" value="BV">Bouvet Island</option>
+                <option class="css-1c25wav" value="BR">Brazil</option>
+                <option class="css-1c25wav" value="IO">
+                  British Indian Ocean Territory
+                </option>
+                <option class="css-1c25wav" value="BN">
+                  Brunei Darussalam
+                </option>
+                <option class="css-1c25wav" value="BG">Bulgaria</option>
+                <option class="css-1c25wav" value="BF">Burkina Faso</option>
+                <option class="css-1c25wav" value="BI">Burundi</option>
+                <option class="css-1c25wav" value="KH">Cambodia</option>
+                <option class="css-1c25wav" value="CM">Cameroon</option>
+                <option class="css-1c25wav" value="CA">Canada</option>
+                <option class="css-1c25wav" value="CV">Cape Verde</option>
+                <option class="css-1c25wav" value="KY">Cayman Islands</option>
+                <option class="css-1c25wav" value="CF">
+                  Central African Republic
+                </option>
+                <option class="css-1c25wav" value="TD">Chad</option>
+                <option class="css-1c25wav" value="CL">Chile</option>
+                <option class="css-1c25wav" value="CN">China</option>
+                <option class="css-1c25wav" value="CX">Christmas Island</option>
+                <option class="css-1c25wav" value="CC">
+                  Cocos (Keeling) Islands
+                </option>
+                <option class="css-1c25wav" value="CO">Colombia</option>
+                <option class="css-1c25wav" value="KM">Comoros</option>
+                <option class="css-1c25wav" value="CG">Congo</option>
+                <option class="css-1c25wav" value="CK">Cook Islands</option>
+                <option class="css-1c25wav" value="CR">Costa Rica</option>
+                <option class="css-1c25wav" value="CI">Cote D'Ivoire</option>
+                <option class="css-1c25wav" value="HR">Croatia</option>
+                <option class="css-1c25wav" value="CU">Cuba</option>
+                <option class="css-1c25wav" value="CY">Cyprus</option>
+                <option class="css-1c25wav" value="CZ">Czech Republic</option>
+                <option class="css-1c25wav" value="DK">Denmark</option>
+                <option class="css-1c25wav" value="DJ">Djibouti</option>
+                <option class="css-1c25wav" value="DM">Dominica</option>
+                <option class="css-1c25wav" value="DO">
+                  Dominican Republic
+                </option>
+                <option class="css-1c25wav" value="TP">East Timor</option>
+                <option class="css-1c25wav" value="EC">Ecuador</option>
+                <option class="css-1c25wav" value="EG">Egypt</option>
+                <option class="css-1c25wav" value="SV">El Salvador</option>
+                <option class="css-1c25wav" value="GQ">
+                  Equatorial Guinea
+                </option>
+                <option class="css-1c25wav" value="ER">Eritrea</option>
+                <option class="css-1c25wav" value="EE">Estonia</option>
+                <option class="css-1c25wav" value="ET">Ethiopia</option>
+                <option class="css-1c25wav" value="FK">
+                  Falkland Islands (Malvinas)
+                </option>
+                <option class="css-1c25wav" value="FO">Faroe Islands</option>
+                <option class="css-1c25wav" value="FJ">Fiji</option>
+                <option class="css-1c25wav" value="FI">Finland</option>
+                <option class="css-1c25wav" value="FR">France</option>
+                <option class="css-1c25wav" value="GF">French Guiana</option>
+                <option class="css-1c25wav" value="PF">French Polynesia</option>
+                <option class="css-1c25wav" value="TF">
+                  French Southern Territories
+                </option>
+                <option class="css-1c25wav" value="GA">Gabon</option>
+                <option class="css-1c25wav" value="GM">Gambia</option>
+                <option class="css-1c25wav" value="GE">Georgia</option>
+                <option class="css-1c25wav" value="DE">Germany</option>
+                <option class="css-1c25wav" value="GH">Ghana</option>
+                <option class="css-1c25wav" value="GI">Gibraltar</option>
+                <option class="css-1c25wav" value="GR">Greece</option>
+                <option class="css-1c25wav" value="GL">Greenland</option>
+                <option class="css-1c25wav" value="GD">Grenada</option>
+                <option class="css-1c25wav" value="GP">Guadeloupe</option>
+                <option class="css-1c25wav" value="GU">Guam</option>
+                <option class="css-1c25wav" value="GT">Guatemala</option>
+                <option class="css-1c25wav" value="GN">Guinea</option>
+                <option class="css-1c25wav" value="GW">Guinea-Bissau</option>
+                <option class="css-1c25wav" value="GY">Guyana</option>
+                <option class="css-1c25wav" value="HT">Haiti</option>
+                <option class="css-1c25wav" value="HM">
+                  Heard and Mc Donald Islands
+                </option>
+                <option class="css-1c25wav" value="HN">Honduras</option>
+                <option class="css-1c25wav" value="HK">Hong Kong</option>
+                <option class="css-1c25wav" value="HU">Hungary</option>
+                <option class="css-1c25wav" value="IS">Iceland</option>
+                <option class="css-1c25wav" value="IN">India</option>
+                <option class="css-1c25wav" value="ID">Indonesia</option>
+                <option class="css-1c25wav" value="IR">
+                  Iran (Islamic Republic of)
+                </option>
+                <option class="css-1c25wav" value="IQ">Iraq</option>
+                <option class="css-1c25wav" value="IE">Ireland</option>
+                <option class="css-1c25wav" value="IL">Israel</option>
+                <option class="css-1c25wav" value="IT">Italy</option>
+                <option class="css-1c25wav" value="JM">Jamaica</option>
+                <option class="css-1c25wav" value="JP">Japan</option>
+                <option class="css-1c25wav" value="JO">Jordan</option>
+                <option class="css-1c25wav" value="KZ">Kazakhstan</option>
+                <option class="css-1c25wav" value="KE">Kenya</option>
+                <option class="css-1c25wav" value="KI">Kiribati</option>
+                <option class="css-1c25wav" value="KP">
+                  Korea, Democratic People's Republic of
+                </option>
+                <option class="css-1c25wav" value="KR">
+                  Korea, Republic of
+                </option>
+                <option class="css-1c25wav" value="XK">Kosovo</option>
+                <option class="css-1c25wav" value="KW">Kuwait</option>
+                <option class="css-1c25wav" value="KG">Kyrgyzstan</option>
+                <option class="css-1c25wav" value="LA">
+                  Lao People's Democratic Republic
+                </option>
+                <option class="css-1c25wav" value="LV">Latvia</option>
+                <option class="css-1c25wav" value="LB">Lebanon</option>
+                <option class="css-1c25wav" value="LS">Lesotho</option>
+                <option class="css-1c25wav" value="LR">Liberia</option>
+                <option class="css-1c25wav" value="LY">
+                  Libyan Arab Jamahiriya
+                </option>
+                <option class="css-1c25wav" value="LI">Liechtenstein</option>
+                <option class="css-1c25wav" value="LT">Lithuania</option>
+                <option class="css-1c25wav" value="LU">Luxembourg</option>
+                <option class="css-1c25wav" value="MO">Macau</option>
+                <option class="css-1c25wav" value="MK">
+                  Macedonia, former Yugoslav Republic of
+                </option>
+                <option class="css-1c25wav" value="MG">Madagascar</option>
+                <option class="css-1c25wav" value="MW">Malawi</option>
+                <option class="css-1c25wav" value="MY">Malaysia</option>
+                <option class="css-1c25wav" value="MV">Maldives</option>
+                <option class="css-1c25wav" value="ML">Mali</option>
+                <option class="css-1c25wav" value="MT">Malta</option>
+                <option class="css-1c25wav" value="MH">Marshall Islands</option>
+                <option class="css-1c25wav" value="MQ">Martinique</option>
+                <option class="css-1c25wav" value="MR">Mauritania</option>
+                <option class="css-1c25wav" value="MU">Mauritius</option>
+                <option class="css-1c25wav" value="YT">Mayotte</option>
+                <option class="css-1c25wav" value="MX">Mexico</option>
+                <option class="css-1c25wav" value="FM">
+                  Micronesia, Federated States of
+                </option>
+                <option class="css-1c25wav" value="MD">
+                  Moldova, Republic of
+                </option>
+                <option class="css-1c25wav" value="MC">Monaco</option>
+                <option class="css-1c25wav" value="MN">Mongolia</option>
+                <option class="css-1c25wav" value="MS">Montserrat</option>
+                <option class="css-1c25wav" value="MA">Morocco</option>
+                <option class="css-1c25wav" value="MZ">Mozambique</option>
+                <option class="css-1c25wav" value="MM">Myanmar</option>
+                <option class="css-1c25wav" value="NA">Namibia</option>
+                <option class="css-1c25wav" value="NR">Nauru</option>
+                <option class="css-1c25wav" value="NP">Nepal</option>
+                <option class="css-1c25wav" value="NL">Netherlands</option>
+                <option class="css-1c25wav" value="AN">
+                  Netherlands Antilles
+                </option>
+                <option class="css-1c25wav" value="NC">New Caledonia</option>
+                <option class="css-1c25wav" value="NZ">New Zealand</option>
+                <option class="css-1c25wav" value="NI">Nicaragua</option>
+                <option class="css-1c25wav" value="NE">Niger</option>
+                <option class="css-1c25wav" value="NG">Nigeria</option>
+                <option class="css-1c25wav" value="NU">Niue</option>
+                <option class="css-1c25wav" value="NF">Norfolk Island</option>
+                <option class="css-1c25wav" value="MP">
+                  Northern Mariana Islands
+                </option>
+                <option class="css-1c25wav" value="NO">Norway</option>
+                <option class="css-1c25wav" value="OM">Oman</option>
+                <option class="css-1c25wav" value="PK">Pakistan</option>
+                <option class="css-1c25wav" value="PW">Palau</option>
+                <option class="css-1c25wav" value="PA">Panama</option>
+                <option class="css-1c25wav" value="PG">Papua New Guinea</option>
+                <option class="css-1c25wav" value="PY">Paraguay</option>
+                <option class="css-1c25wav" value="PE">Peru</option>
+                <option class="css-1c25wav" value="PH">Philippines</option>
+                <option class="css-1c25wav" value="PN">Pitcairn</option>
+                <option class="css-1c25wav" value="PL">Poland</option>
+                <option class="css-1c25wav" value="PT">Portugal</option>
+                <option class="css-1c25wav" value="PR">Puerto Rico</option>
+                <option class="css-1c25wav" value="QA">Qatar</option>
+                <option class="css-1c25wav" value="RE">Reunion</option>
+                <option class="css-1c25wav" value="RO">Romania</option>
+                <option class="css-1c25wav" value="RU">
+                  Russian Federation
+                </option>
+                <option class="css-1c25wav" value="RW">Rwanda</option>
+                <option class="css-1c25wav" value="KN">
+                  Saint Kitts and Nevis
+                </option>
+                <option class="css-1c25wav" value="LC">Saint Lucia</option>
+                <option class="css-1c25wav" value="VC">
+                  Saint Vincent and the Grenadines
+                </option>
+                <option class="css-1c25wav" value="WS">Samoa</option>
+                <option class="css-1c25wav" value="SM">San Marino</option>
+                <option class="css-1c25wav" value="ST">
+                  Sao Tome and Principe
+                </option>
+                <option class="css-1c25wav" value="SA">Saudi Arabia</option>
+                <option class="css-1c25wav" value="SN">Senegal</option>
+                <option class="css-1c25wav" value="CS">
+                  Serbia and Montenegro
+                </option>
+                <option class="css-1c25wav" value="SC">Seychelles</option>
+                <option class="css-1c25wav" value="SL">Sierra Leone</option>
+                <option class="css-1c25wav" value="SG">Singapore</option>
+                <option class="css-1c25wav" value="SK">
+                  Slovakia (Slovak Republic)
+                </option>
+                <option class="css-1c25wav" value="SI">Slovenia</option>
+                <option class="css-1c25wav" value="SB">Solomon Islands</option>
+                <option class="css-1c25wav" value="SO">Somalia</option>
+                <option class="css-1c25wav" value="ZA">South Africa</option>
+                <option class="css-1c25wav" value="ES">Spain</option>
+                <option class="css-1c25wav" value="LK">Sri Lanka</option>
+                <option class="css-1c25wav" value="SH">St. Helena</option>
+                <option class="css-1c25wav" value="PM">
+                  St. Pierre and Miquelon
+                </option>
+                <option class="css-1c25wav" value="SD">Sudan</option>
+                <option class="css-1c25wav" value="SR">Suriname</option>
+                <option class="css-1c25wav" value="SJ">
+                  Svalbard and Jan Mayen Islands
+                </option>
+                <option class="css-1c25wav" value="SZ">Swaziland</option>
+                <option class="css-1c25wav" value="SE">Sweden</option>
+                <option class="css-1c25wav" value="CH">Switzerland</option>
+                <option class="css-1c25wav" value="SY">
+                  Syrian Arab Republic
+                </option>
+                <option class="css-1c25wav" value="TW">Taiwan</option>
+                <option class="css-1c25wav" value="TJ">Tajikistan</option>
+                <option class="css-1c25wav" value="TZ">
+                  Tanzania, United Republic of
+                </option>
+                <option class="css-1c25wav" value="TH">Thailand</option>
+                <option class="css-1c25wav" value="TG">Togo</option>
+                <option class="css-1c25wav" value="TK">Tokelau</option>
+                <option class="css-1c25wav" value="TO">Tonga</option>
+                <option class="css-1c25wav" value="TT">
+                  Trinidad and Tobago
+                </option>
+                <option class="css-1c25wav" value="TN">Tunisia</option>
+                <option class="css-1c25wav" value="TR">Turkey</option>
+                <option class="css-1c25wav" value="TM">Turkmenistan</option>
+                <option class="css-1c25wav" value="TC">
+                  Turks and Caicos Islands
+                </option>
+                <option class="css-1c25wav" value="TV">Tuvalu</option>
+                <option class="css-1c25wav" value="UG">Uganda</option>
+                <option class="css-1c25wav" value="UA">Ukraine</option>
+                <option class="css-1c25wav" value="AE">
+                  United Arab Emirates
+                </option>
+                <option class="css-1c25wav" value="GB">United Kingdom</option>
+                <option class="css-1c25wav" value="UM">
+                  United States Minor Outlying Islands
+                </option>
+                <option class="css-1c25wav" value="UY">Uruguay</option>
+                <option class="css-1c25wav" value="UZ">Uzbekistan</option>
+                <option class="css-1c25wav" value="VU">Vanuatu</option>
+                <option class="css-1c25wav" value="VA">
+                  Vatican City State (Holy See)
+                </option>
+                <option class="css-1c25wav" value="VE">Venezuela</option>
+                <option class="css-1c25wav" value="VN">Vietnam</option>
+                <option class="css-1c25wav" value="VG">
+                  Virgin Islands (British)
+                </option>
+                <option class="css-1c25wav" value="VI">
+                  Virgin Islands (U.S.)
+                </option>
+                <option class="css-1c25wav" value="WF">
+                  Wallis And Futuna Islands
+                </option>
+                <option class="css-1c25wav" value="EH">Western Sahara</option>
+                <option class="css-1c25wav" value="YE">Yemen</option>
+                <option class="css-1c25wav" value="ZM">Zambia</option>
+                <option class="css-1c25wav" value="ZW">Zimbabwe</option>
+              </select>
+              <input
+                class="css-itk919"
+                name="postalCode"
+                id="postalCode"
+                data-testid="new-card-postal-code-field"
+                type="text"
+                aria-invalid="false"
+                placeholder=""
+                value=""
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

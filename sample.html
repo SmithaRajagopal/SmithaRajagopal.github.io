@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Coravin</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'card')"
+        >
+          <h2><b>Payment</b></h2>
+        </button>
+      </div>
+
+      <!-------------------Coravin SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none"></div>
+
+      <!-----------------------Coravin Sign In-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none"></div>
+
+      <!------------------------Coravin Forgot Password-------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none"></div>
+
+      <!------------------------Coravin Checkout Information-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none"></div>
+
+      <!------------------------Coravin Card Information-------------------->
+
+      <div id="card" class="sub-field" style="display: none"></div>
+    </div>
+  </body>
+</html>

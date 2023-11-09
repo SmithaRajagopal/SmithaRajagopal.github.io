@@ -1,0 +1,397 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Alibaba</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'card')"
+        >
+          <h2><b>Payment</b></h2>
+        </button>
+      </div>
+
+      <!-------------------Alibaba SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none">
+        <label for="country" required="" class="next-col-8 next-form-item-label"
+          >Country/Region:</label
+        >
+        <div class="countrySelect">
+          <span
+            value="US"
+            data-meta="Field"
+            id="country"
+            autocomplete="new-password"
+            lang="zh-cn"
+            class="next-select opened large"
+            tabindex="0"
+            style="min-width: 160px; width: 100%"
+            ><input id="country" name="select-faker" value="US" /><span
+              class="next-select-inner"
+            ></span>
+          </span>
+        </div>
+        <label for="email" required="" class="next-col-8 next-form-item-label"
+          >Email Address:</label
+        >
+        <input
+          type="text"
+          placeholder="Please set the email as the login name."
+          value=""
+          data-meta="Field"
+          id="email"
+          autocomplete="new-password"
+          height="100%"
+        /><br />
+        <label
+          for="password"
+          required=""
+          class="next-col-8 next-form-item-label"
+          >Login Password:</label
+        >
+        <input
+          type="password"
+          autocomplete="new-password"
+          value=""
+          placeholder="Set the login password"
+          data-meta="Field"
+          id="password"
+          height="100%"
+        /><br />
+
+        <label for="enNameInput" required="">Full name:</label>
+        <input
+          type="text"
+          name="firstName"
+          placeholder="Please enter your first name"
+          value=""
+          height="100%"
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Please enter your last name"
+          value=""
+          height="100%"
+        /><br />
+      </div>
+      <!-----------------------Alibaba Sign In-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <label for="fm-login-id">Account:</label>
+        <input
+          id="fm-login-id"
+          class="fm-text"
+          name="loginId"
+          tabindex="1"
+          placeholder="Email address or member ID"
+          value=""
+          autocorrect="off"
+          autocapitalize="off"
+          data-spm-anchor-id="a2700.icbu-homelogin.0.i0.36f11afaQKKOod"
+        />
+
+        <label for="fm-login-password">Password:</label>
+        <input
+          id="fm-login-password"
+          class="fm-text"
+          type="password"
+          name="password"
+          tabindex="2"
+          placeholder="Password"
+          autocorrect="off"
+          autocapitalize="off"
+          data-spm-anchor-id="a2700.icbu-homelogin.0.i2.36f11afaQKKOod"
+        />
+      </div>
+
+      <!------------------------Alibaba Forgot Password-------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        <label class="ui-label"> login Id: </label>
+        <input
+          id="J-accName"
+          name="_fm-p-_0-l"
+          class="ui-input"
+          type="text"
+          placeholder=" Email address or member ID "
+          value=""
+          data-explain=""
+          data-widget-cid="widget-1"
+          data-spm-anchor-id="a1z5k.7633538.0.i0.417b5a87p77mDN"
+        />
+      </div>
+
+      <!------------------------Alibaba Checkout Information-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+        <label for="country" required=""
+          ><span
+            data-i18n-appname="trade-biz"
+            data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.country.label"
+            >Country/Region</span
+          ></label
+        >
+        <input
+          id="country"
+          role="combobox"
+          tabindex="0"
+          style="width: 300px"
+          size="1"
+          autocomplete="random123456789"
+          value="United States of America (United States)"
+          aria-valuetext="United States of America (United States)"
+          data-spm-anchor-id="a2756.trade-order-standard.0.i6.3e5a65aaQgXPwI"
+          aria-expanded="false"
+        /><br />
+        <label required="">Address Line 1</label>
+        <input
+          id="address"
+          placeholder="Street Address, PO box,etc"
+          height="100%"
+          type="text"
+          autocomplete="random123456789"
+          value=""
+        /><br />
+        <label for="address2">Address Line 2</label>
+        <input
+          id="address2"
+          placeholder="Appartment, suite, unit, etc (optional)"
+          height="100%"
+          type="text"
+          autocomplete="random123456789"
+          value=""
+        /><br />
+        <label for="province" required="">State/Province</label>
+        <input
+          id="province"
+          role="combobox"
+          tabindex="0"
+          style="width: 300px"
+          placeholder="Please select a State/Province/Region"
+          height="100%"
+          size="1"
+          autocomplete="random123456789"
+          value=""
+          aria-valuetext=""
+          aria-expanded="false"
+        /><br />
+        <label for="city" required="">City</label>
+        <input
+          id="city"
+          role="combobox"
+          tabindex="0"
+          style="width: 300px"
+          placeholder="Please enter a City"
+          height="100%"
+          size="1"
+          autocomplete="random123456789"
+          value=""
+          aria-valuetext=""
+          data-spm-anchor-id="a2756.trade-order-standard.0.i11.3e5a65aaQgXPwI"
+          aria-expanded="false"
+        /><br />
+        <label for="zip" required="">Zip Code</label>
+        <input
+          id="zip"
+          placeholder="Please enter a ZIP/Postal Code"
+          height="100%"
+          type="text"
+          autocomplete="random123456789"
+          value=""
+        /><br />
+
+        <label for="contactPerson" required="">Contact Name</label>
+        <input
+          id="contactPerson"
+          placeholder="Please enter a Contact Name"
+          height="100%"
+          type="text"
+          autocomplete="random123456789"
+          value=""
+          data-spm-anchor-id="a2756.trade-order-standard.0.i13.3e5a65aaQgXPwI"
+        /><br />
+        <label required="">Phone Number</label>
+        <input
+          id="phoneCode"
+          placeholder="Country code"
+          height="100%"
+          type="text"
+          autocomplete="random123456789"
+          value="+1"
+          data-spm-anchor-id="a2756.trade-order-standard.0.i14.3e5a65aaQgXPwI"
+        />
+        <input
+          id="mobileNo"
+          placeholder="Phone No."
+          height="100%"
+          type="text"
+          autocomplete="random123456789"
+          value=""
+        />
+      </div>
+
+      <!------------------------Alibaba Card Information-------------------->
+
+      <div id="card" class="sub-field" style="display: none">
+        <label for="cardNumber"
+          ><span
+            data-i18n-appname="bounty"
+            data-i18n-key="checkout.pay-account.add-card.CardNumber"
+            >Card Number</span
+          ></label
+        >
+        <input
+          id="cardNumber"
+          height="100%"
+          autocomplete="nope"
+          value=""
+          data-spm-anchor-id="a2756.trade-order-standard.0.i1.1bdd65aapZLnWd"
+        /><br />
+        <label
+          ><span
+            data-i18n-appname="bounty"
+            data-i18n-key="checkout.pay-account.add-card.CardholderName"
+            >Name</span
+          ></label
+        >
+        <input
+          id="firstName"
+          placeholder="Given names"
+          height="100%"
+          autocomplete="nope"
+          value=""
+        />
+        <input
+          id="lastName"
+          placeholder="Surname"
+          height="100%"
+          autocomplete="nope"
+          value=""
+          data-spm-anchor-id="a2756.trade-order-standard.0.i5.1bdd65aapZLnWd"
+        /><br />
+
+        <label
+          ><span
+            data-i18n-appname="bounty"
+            data-i18n-key="checkout.pay-account.add-card.ExpirationDate"
+            >Expiration Date</span
+          ></label
+        >
+        <span class="next-input next-medium next-select-inner"
+          ><span class="next-select-values next-input-text-field"
+            ><span class="next-select-trigger-search"
+              ><input
+                id="month"
+                role="combobox"
+                tabindex="0"
+                placeholder="MM"
+                readonly=""
+                height="100%"
+                size="1"
+                autocomplete="nope"
+                value=""
+                aria-valuetext="" /><span
+                aria-hidden="true"
+              ></span></span></span
+          ><span class="next-input-control"
+            ><span aria-hidden="true" class="next-select-arrow"
+              ><i
+                class="next-icon next-icon-arrow-down next-medium"
+              ></i></span></span
+        ></span>
+        <span class="date-form-text">/</span>
+        <span class="next-input next-medium next-select-inner"
+          ><span class="next-select-values next-input-text-field"
+            ><span class="next-select-trigger-search"
+              ><input
+                id="year"
+                role="combobox"
+                tabindex="0"
+                placeholder="YY"
+                readonly=""
+                height="100%"
+                size="1"
+                autocomplete="nope"
+                value=""
+                aria-valuetext="" /><span
+                aria-hidden="true"
+              ></span></span></span
+          ><span class="next-input-control"
+            ><span aria-hidden="true" class="next-select-arrow"
+              ><i
+                class="next-icon next-icon-arrow-down next-medium"
+              ></i></span></span></span
+        ><br />
+
+        <label
+          ><span
+            data-i18n-appname="bounty"
+            data-i18n-key="checkout.pay-account.add-card.SecurityCode"
+            >CVV / CSC</span
+          ></label
+        >
+        <input
+          minlength="3"
+          id="security"
+          placeholder="CVV/CSC"
+          name="security"
+          maxlength="4"
+          height="100%"
+          type=""
+          autocomplete="new-security"
+          value=""
+          data-spm-anchor-id="a2700.27971840.0.i0.60a865aaEHPPtb"
+        />
+      </div>
+    </div>
+  </body>
+</html>

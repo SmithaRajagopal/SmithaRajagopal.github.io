@@ -1,0 +1,644 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Farmers</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'findAgent')"
+        >
+          <h2><b>Find Agent</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'home')"
+        >
+          <h2><b>HomePage</b></h2>
+        </button>
+      </div>
+
+      <!-------------------Farmers SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none">
+        <div class="mat-form-field-infix ng-tns-c37-0">
+          <label
+            class="mat-form-field-label ng-tns-c37-0 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-1"
+            for="FirstName"
+            aria-owns="FirstName"
+            ><!----><mat-label class="ng-tns-c37-0 ng-star-inserted"
+              >First name</mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c37-0 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            matinput=""
+            data-gtm="CSS_PolicyInfo_FirstName_Input"
+            id="FirstName"
+            type="text"
+            maxlength="15"
+            aria-label="First name"
+            aria-required="true"
+            aria-describedby="fnRequired fnAlpha"
+            formcontrolname="firstName"
+            cssfocus=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c37-0 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched"
+            required=""
+          /><span class="mat-form-field-label-wrapper ng-tns-c37-0"
+            ><!----></span
+          >
+        </div>
+
+        <div class="mat-form-field-infix ng-tns-c37-1">
+          <label
+            class="mat-form-field-label ng-tns-c37-1 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-3"
+            for="LastName"
+            aria-owns="LastName"
+            ><!----><mat-label class="ng-tns-c37-1 ng-star-inserted"
+              >Last name</mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c37-1 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            data-gtm="CSS_PolicyInfo_LastName_Input"
+            matinput=""
+            id="LastName"
+            aria-describedby="lnRequired lnAlpha"
+            type="text"
+            maxlength="20"
+            aria-label="Last name"
+            aria-required="true"
+            formcontrolname="lastName"
+            cssfocus=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c37-1 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored"
+            required=""
+          /><span class="mat-form-field-label-wrapper ng-tns-c37-1"
+            ><!----></span
+          >
+        </div>
+        <div class="mat-form-field-infix ng-tns-c37-3">
+          <label
+            class="mat-form-field-label ng-tns-c37-3 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-7"
+            for="zipCode"
+            aria-owns="zipCode"
+            ><!----><mat-label class="ng-tns-c37-3 ng-star-inserted"
+              >ZIP Code</mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c37-3 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            data-gtm="CSS_PolicyInfo_ZipCode_Input"
+            id="zipCode"
+            aria-describedby="zipRequired zipFormat"
+            matinput=""
+            type="text"
+            aria-label="ZIP Code"
+            aria-required="true"
+            formcontrolname="zipCode"
+            csszipcodemask=""
+            cssfocus=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c37-3 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored"
+            required=""
+          /><span class="mat-form-field-label-wrapper ng-tns-c37-3"
+            ><!----></span
+          >
+        </div>
+      </div>
+
+      <!-----------------------Farmers Sign In-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <input
+          matinput=""
+          type="email"
+          placeholder="Enter your username"
+          aria-placeholder="Enter your username"
+          formcontrolname="username"
+          id="usernameInputField"
+          data-gtm="CSS_Loginpage_Username"
+          class="mat-input-element mat-form-field-autofill-control ng-tns-c37-1 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched"
+          required=""
+          aria-required="true"
+        />
+      </div>
+
+      <!------------------------Farmers Forgot Password-------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        <div class="mat-form-field-infix ng-tns-c37-0">
+          <label
+            class="mat-form-field-label ng-tns-c37-0 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-1"
+            for="FirstName"
+            aria-owns="FirstName"
+            ><!----><mat-label
+              class="text-input-label ng-tns-c37-0 ng-star-inserted"
+            >
+              First name </mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c37-0 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            aria-describedby="fnRequired fnAlpha mat-error-0"
+            cssfocus=""
+            data-gtm="CSS_AuthenticationForgotUserPassword_FirstName_Input"
+            formcontrolname="firstName"
+            id="FirstName"
+            matinput=""
+            type="text"
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c37-0 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched"
+            required=""
+            aria-required="true"
+          /><span class="mat-form-field-label-wrapper ng-tns-c37-0"
+            ><!----></span
+          >
+        </div>
+        <div class="mat-form-field-infix ng-tns-c37-1">
+          <label
+            class="mat-form-field-label ng-tns-c37-1 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-3"
+            for="LastName"
+            aria-owns="LastName"
+            ><!----><mat-label
+              class="text-input-label ng-tns-c37-1 ng-star-inserted"
+            >
+              Last name </mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c37-1 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            aria-describedby="lnRequired lnAlpha"
+            aria-required="true"
+            cssfocus=""
+            data-gtm="CSS_AuthenticationForgotUserPassword_LastName_Input"
+            formcontrolname="lastName"
+            id="LastName"
+            matinput=""
+            maxlength="20"
+            type="text"
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c37-1 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored"
+            required=""
+          /><span class="mat-form-field-label-wrapper ng-tns-c37-1"
+            ><!----></span
+          >
+        </div>
+        <div class="mat-form-field-infix ng-tns-c37-3">
+          <label
+            class="mat-form-field-label ng-tns-c37-3 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-7"
+            for="zipCode"
+            aria-owns="zipCode"
+            ><!----><mat-label
+              name="label-error"
+              class="ng-tns-c37-3 ng-star-inserted"
+              >ZIP Code</mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c37-3 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            aria-describedby="zipRequired zipFormat"
+            aria-required="true"
+            cssfocus=""
+            csszipcodemask=""
+            data-gtm="CSS_AuthenticationForgotUserPassword_ZipCode_Input"
+            formcontrolname="zipCode"
+            id="zipCode"
+            matinput=""
+            maxlength="10"
+            type="text"
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c37-3 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored"
+            required=""
+          /><span class="mat-form-field-label-wrapper ng-tns-c37-3"
+            ><!----></span
+          >
+        </div>
+      </div>
+
+      <!------------------------Farmers Checkout Information-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+        <div class="mat-form-field-infix ng-tns-c56-5">
+          <label
+            class="mat-form-field-label ng-tns-c56-5 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-3"
+            for="mat-input-1"
+            aria-owns="mat-input-1"
+            ><!----><mat-label
+              _ngcontent-vwi-c114=""
+              class="ng-tns-c56-5 ng-star-inserted"
+            >
+              Street number and name
+              <!----></mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c56-5 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            _ngcontent-vwi-c114=""
+            aria-autocomplete="inline"
+            role="combobox"
+            maxlength="maxlength"
+            matinput=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c56-5 ng-pristine ng-invalid cdk-text-field-autofill-monitored pac-target-input ng-touched"
+            tabindex="1"
+            aria-expanded="false"
+            required=""
+            id="mat-input-1"
+            data-placeholder=""
+            aria-required="true"
+            autocomplete="off"
+            aria-describedby="mat-error-1"
+          /><span class="mat-form-field-label-wrapper ng-tns-c56-5"
+            ><!----></span
+          >
+        </div>
+
+        <div class="mat-form-field-infix ng-tns-c56-4">
+          <label
+            class="mat-form-field-label ng-tns-c56-4 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-1"
+            for="mat-input-0"
+            aria-owns="mat-input-0"
+            ><!----><mat-label
+              _ngcontent-vwi-c114=""
+              class="ng-tns-c56-4 ng-star-inserted"
+            >
+              City
+              <!----></mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c56-4 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            _ngcontent-vwi-c114=""
+            maxlength="maxlength"
+            matinput=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c56-4 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored"
+            tabindex="1"
+            required=""
+            id="mat-input-0"
+            data-placeholder=""
+            aria-required="true"
+          /><span class="mat-form-field-label-wrapper ng-tns-c56-4"
+            ><!----></span
+          >
+        </div>
+
+        <div class="mat-form-field-infix ng-tns-c56-6">
+          <label
+            class="mat-form-field-label ng-tns-c56-6 ng-star-inserted"
+            id="mat-form-field-label-5"
+            for="mat-input-2"
+            aria-owns="mat-input-2"
+            ><!----><mat-label
+              _ngcontent-vwi-c114=""
+              class="ng-tns-c56-6 ng-star-inserted"
+            >
+              ZIP Code</mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c56-6 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            _ngcontent-vwi-c114=""
+            type="number"
+            matinput=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c56-6 ng-pristine ng-valid cdk-text-field-autofill-monitored ng-touched"
+            tabindex="1"
+            aria-label="Edit Box. Changing zip code opens Are you sure modal dialog box"
+            required=""
+            id="mat-input-2"
+            data-placeholder=""
+            aria-invalid="false"
+            aria-required="true"
+            pattern="[0-9]{5}"
+          /><span class="mat-form-field-label-wrapper ng-tns-c56-6"
+            ><!----></span
+          >
+        </div>
+        <div class="mat-form-field-infix ng-tns-c56-32">
+          <label
+            class="mat-form-field-label ng-tns-c56-32 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-35"
+            for="mat-input-9"
+            aria-owns="mat-input-9"
+            ><!----><mat-label
+              _ngcontent-vwi-c114=""
+              class="ng-tns-c56-32 ng-star-inserted"
+            >
+              First name
+              <!----></mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c56-32 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            _ngcontent-vwi-c114=""
+            maxlength="maxlength"
+            matinput=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c56-32 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored"
+            tabindex="1"
+            required=""
+            id="mat-input-9"
+            data-placeholder=""
+            aria-required="true"
+          /><span class="mat-form-field-label-wrapper ng-tns-c56-32"
+            ><!----></span
+          >
+        </div>
+        <div class="mat-form-field-infix ng-tns-c56-33">
+          <label
+            class="mat-form-field-label ng-tns-c56-33 mat-empty mat-form-field-empty ng-star-inserted"
+            id="mat-form-field-label-37"
+            for="mat-input-10"
+            aria-owns="mat-input-10"
+            ><!----><mat-label
+              _ngcontent-vwi-c114=""
+              class="ng-tns-c56-33 ng-star-inserted"
+            >
+              Last name
+              <!----></mat-label
+            ><!----><span
+              aria-hidden="true"
+              class="mat-placeholder-required mat-form-field-required-marker ng-tns-c56-33 ng-star-inserted"
+            >
+              *</span
+            ><!----></label
+          >
+          <input
+            _ngcontent-vwi-c114=""
+            maxlength="maxlength"
+            matinput=""
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c56-33 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored"
+            tabindex="1"
+            required=""
+            id="mat-input-10"
+            data-placeholder=""
+            aria-required="true"
+          /><span class="mat-form-field-label-wrapper ng-tns-c56-33"
+            ><!----></span
+          >
+        </div>
+      </div>
+
+      <!------------------------Farmers FindAgent Information-------------------->
+
+      <div id="findAgent" class="sub-field" style="display: none">
+        <div class="Locator-searchBar" data-ya-suffix="Hero">
+          <label class="search-label" for="q"
+            ><span class="js-search-label sr-only is-hidden"
+              >Search by City</span
+            ></label
+          ><input
+            placeholder="City and State, or Zip"
+            class="search-input Locator-input js-locator-input Locator-minWidth"
+            type="text"
+            name="qp"
+            id="q"
+            value=""
+            onfocus="this.setSelectionRange(0, this.value.length);"
+            required=""
+            data-ya-track="searchbyaddressquery"
+            data-gtm="AWS_directorypage_searchbyaddressquery-input_Hero"
+            autocomplete="off"
+            aria-expanded="false"
+            aria-autocomplete="both"
+            aria-activedescendant=""
+            aria-owns="results"
+            aria-describedby="initInstr"
+          />
+          <div class="Locator-optionsWrapper">
+            <div class="search-optional-inputs is-hidden">
+              <label class="sr-only" for="search-by-name-form-state"
+                >State</label
+              ><select
+                name="region"
+                class="state-input Form-dropdown js-state-input-name"
+                data-sel-id="agent-search-by-name-state"
+                id="search-by-name-form-state"
+                data-ya-track="state"
+                data-gtm="AWS_directorypage_state-select_Hero"
+              >
+                <option value="" selected="">State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="getANewQuote-inputContainer">
+          <input
+            placeholder="Enter your zip code"
+            class="getANewQuote-input"
+            name="getAQuoteZipCode"
+            value=""
+            id="js-getAQuoteInput"
+            data-ya-track="getaquotequery"
+            data-gtm="AWS_directorypage_getaquotequery-input_Hero"
+          />
+          <div class="quote-button-wrapper">
+            <form
+              id="js-banner-get-quote"
+              class="quote-formEl"
+              method="GET"
+              target="_blank"
+              action="https://esales.farmers.com/fastquote"
+            >
+              <input type="hidden" name="Lob" value="" /><input
+                type="hidden"
+                name="Source_Indicator"
+                value="AS"
+              /><input
+                type="hidden"
+                id="js-banner-get-quote--zip"
+                name="Zip_Code"
+                class="quote-zip"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+      <!------------------------StateFarm HomePage Information-------------------->
+
+      <div id="home" class="sub-field" style="display: none">
+        <label
+          class="mdc-text-field mdc-text-field--filled mb-0 ripple-element px-0 mdc-ripple-upgraded has-ripple"
+          style="
+            --mdc-ripple-fg-size: 106px;
+            --mdc-ripple-fg-scale: 1.85698;
+            --mdc-ripple-fg-translate-start: -8.83594px, -22.5781px;
+            --mdc-ripple-fg-translate-end: 36.125px, -25px;
+          "
+        >
+          <span class="mdc-text-field__ripple"></span>
+          <span class="mdc-floating-label" id="form-text-1875751575-field"
+            >ZIP Code</span
+          >
+
+          <input
+            class="mdc-text-field__input input__input"
+            id="form-text-1875751575"
+            type="number"
+            aria-labelledby="form-text-1875751575-field"
+            aria-required="true"
+            aria-describedby="form-text-1875751575-desc"
+            pattern="[0-9]*"
+            autocomplete="off"
+            step="1"
+            name="Zip_Code" />
+          <span
+            class="mdc-line-ripple"
+            style="transform-origin: 42.5px center"
+          ></span>
+          <span
+            class="ripple ripple-animate"
+            style="
+              height: 178.25px;
+              width: 178.25px;
+              animation-duration: 0.7s;
+              animation-timing-function: linear;
+              background: rgb(148, 148, 148);
+              opacity: 0.4;
+              top: -59.125px;
+              left: -45.625px;
+            "
+          ></span
+        ></label>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Wish</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+      </div>
+
+      <!------------------------Wish SignIn-------------------->
+      <div id="signin" class="sub-field" style="display: none">
+        <input
+          type="text"
+          placeholder="Phone number or email"
+          autocomplete="email"
+          data-id="emailAddress"
+          data-testid="login-username"
+          inputmode="text"
+          class="WishTextInput-molq32-5 eKoNJN EmailAndPhoneTextInput__StyledEmailAndPhoneTextInput-sc-18kw5ac-4 jehMUJ"
+          value=""
+        /><br />
+        <input
+          type="password"
+          placeholder="Password"
+          autocomplete="current-password"
+          data-id="password"
+          data-testid="login-password"
+          inputmode="text"
+          class="WishTextInput-molq32-5 eKoNJN AuthenticationPage__AuthenticationTextInput-sc-1nahtik-14 eQLlrY"
+          value=""
+        />
+      </div>
+      <!------------------------Wish SignUp-------------------->
+      <div id="signup" class="sub-field" style="display: none">
+        <input
+          type="text"
+          maxlength="50"
+          placeholder="First name"
+          data-id="firstName"
+          name="firstname"
+          data-testid="signup-firstname"
+          inputmode="text"
+          class="WishTextInput-molq32-5 eKoNJN AuthenticationPage__AuthenticationTextInput-sc-1nahtik-14 eQLlrY"
+          value=""
+        /><br />
+        <input
+          type="text"
+          maxlength="50"
+          placeholder="Last name"
+          data-id="lastName"
+          name="lastname"
+          data-testid="signup-lastname"
+          inputmode="text"
+          class="WishTextInput-molq32-5 eKoNJN AuthenticationPage__AuthenticationTextInput-sc-1nahtik-14 eQLlrY"
+          value=""
+        /><br />
+        <input
+          type="text"
+          placeholder="Email address"
+          autocomplete="email"
+          data-id="emailAddress"
+          data-testid="signup-email"
+          inputmode="text"
+          class="WishTextInput-molq32-5 eKoNJN EmailAndPhoneTextInput__StyledEmailAndPhoneTextInput-sc-18kw5ac-4 jehMUJ"
+          value=""
+        /><br />
+        <input
+          type="password"
+          maxlength="50"
+          placeholder="Password"
+          autocomplete="new-password"
+          data-id="password"
+          name="password"
+          data-testid="signup-password"
+          inputmode="text"
+          class="WishTextInput-molq32-5 eKoNJN AuthenticationPage__AuthenticationTextInput-sc-1nahtik-14 eQLlrY"
+          value=""
+        /><br />
+      </div>
+
+      <!------------------------Wish Forget Password-------------------->
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        Enter your phone number or email<br />
+        <input
+          type="text"
+          placeholder="Phone number or email"
+          inputmode="text"
+          class="WishTextInput-molq32-5 gjqHYd EmailAndPhoneTextInput__StyledEmailAndPhoneTextInput-sc-18kw5ac-4 jehMUJ"
+          value=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

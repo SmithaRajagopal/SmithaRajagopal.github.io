@@ -1,0 +1,1111 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Nationwide</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'paybill')"
+        >
+          <h2><b>PayBill</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'homepage')"
+        >
+          <h2><b>HomePage</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'claimform')"
+        >
+          <h2><b>ClaimForm</b></h2>
+        </button>
+      </div>
+
+      <!-------------------Nationwide SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none">
+        <label
+          class="text"
+          id="label_TextInputZipComponent-1"
+          for="TextInputZipComponent-1"
+          >Mailing Zip Code</label
+        >
+        <input
+          size="15"
+          type="tel"
+          class="zip-code-input"
+          id="TextInputZipComponent-1"
+          name="zipCode"
+          maxlength="5"
+          placeholder="E.g. 12345"
+        />
+      </div>
+
+      <!-----------------------Nationwide Sign In-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <span class="inputSection">
+          <p id="formFieldText">Username</p>
+          <input
+            type="text"
+            id="loginUsername"
+            class="username required"
+            autocapitalize="off"
+            autocorrect="off"
+            autocomplete="off"
+            name="user"
+            placeholder="Username"
+            data-errormsg="Enter your username"
+            data-errortype="above"
+            aria-label="Username"
+          />
+          <p id="formFieldText">Password</p>
+          <p class="passwordfield">
+            <input
+              type="password"
+              id="loginPassword"
+              class="password required"
+              name="password"
+              autocomplete="off"
+              placeholder="Password"
+              data-errormsg="Enter your password"
+              data-errortype="above"
+              celebruspassword="true"
+              aria-label="Password"
+            />
+          </p>
+        </span>
+      </div>
+
+      <!------------------------Nationwide PayBill-------------------->
+
+      <div id="paybill" class="sub-field" style="display: none">
+        <label
+          for="bolt-textfield-wc--4156971"
+          class="bolt-textfield-wc--label bolt-textfield-wc--label__"
+          id="bolt-textfield-wc--label--2519130"
+        >
+          Phone number
+          <slot name="help"> </slot>
+        </label>
+        <input
+          class="bolt-textfield-wc--input bolt-textfield-wc--input__ bolt-textfield-wc--input__has-error"
+          data-test="input"
+          id="bolt-textfield-wc--4156971"
+          name="phoneNumber"
+          placeholder=""
+          type="text"
+          min=""
+          max=""
+          step=""
+          maxlength="14"
+          spellcheck="false"
+          autocomplete="on"
+          autocorrect="off"
+          autocapitalize="on"
+          required=""
+          aria-disabled="false"
+          aria-invalid="true"
+          aria-label="Phone number"
+        />
+        <label
+          for="bolt-textfield-wc--2507380"
+          class="bolt-textfield-wc--label bolt-textfield-wc--label__"
+          id="bolt-textfield-wc--label--3178211"
+        >
+          ZIP code
+          <slot name="help"> </slot>
+        </label>
+        <input
+          class="bolt-textfield-wc--input bolt-textfield-wc--input__"
+          data-test="input"
+          id="bolt-textfield-wc--2507380"
+          name="zipCode"
+          placeholder=""
+          type="text"
+          min=""
+          max=""
+          step=""
+          maxlength="5"
+          spellcheck="false"
+          autocomplete="on"
+          autocorrect="off"
+          autocapitalize="on"
+          required=""
+          aria-disabled="false"
+          aria-invalid="false"
+          aria-label="ZIP"
+        />
+      </div>
+      <!------------------------Nationwide Checkout-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+        <div _ngcontent-wsr-c136="" class="form-group col-sm-7 col-lg-4">
+          <label _ngcontent-wsr-c136="" for="gs-first-name">First name</label>
+          <div _ngcontent-wsr-c136="" class="input-group">
+            <input
+              _ngcontent-wsr-c136=""
+              id="gs-first-name"
+              type="text"
+              formcontrolname="firstName"
+              required=""
+              aria-describedby="input-error"
+              class="form-control ng-pristine ng-invalid ng-touched"
+            />
+            <div _ngcontent-wsr-c136="" class="input-group-append">
+              <div _ngcontent-wsr-c136="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+
+        <div _ngcontent-wsr-c136="" class="form-group col-sm-4 col-lg-2">
+          <label _ngcontent-wsr-c136="" for="gs-middle-name"
+            >MI <span _ngcontent-wsr-c136="">(optional)</span></label
+          >
+          <div _ngcontent-wsr-c136="" class="input-group">
+            <input
+              _ngcontent-wsr-c136=""
+              id="gs-middle-name"
+              type="text"
+              formcontrolname="middleName"
+              class="form-control ng-untouched ng-pristine ng-valid"
+            />
+            <div _ngcontent-wsr-c136="" class="input-group-append">
+              <div _ngcontent-wsr-c136="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-wsr-c136="" class="form-group col-sm-7 col-lg-4">
+          <label _ngcontent-wsr-c136="" for="gs-last-name">Last name</label>
+          <div _ngcontent-wsr-c136="" class="input-group">
+            <input
+              _ngcontent-wsr-c136=""
+              id="gs-last-name"
+              type="text"
+              formcontrolname="lastName"
+              aria-describedby="input-error"
+              class="form-control ng-untouched ng-pristine ng-invalid"
+            />
+            <div _ngcontent-wsr-c136="" class="input-group-append">
+              <div _ngcontent-wsr-c136="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-wsr-c136="" class="form-group col-md-3 col-6">
+          <label _ngcontent-wsr-c136="" id="state">State</label>
+          <div _ngcontent-wsr-c136="" class="input-group">
+            <select
+              _ngcontent-wsr-c136=""
+              formcontrolname="state"
+              aria-labelledby="state"
+              id="gs-quote-state"
+              aria-describedby="input-error"
+              class="form-control custom-select ng-untouched ng-pristine ng-invalid"
+            >
+              <option _ngcontent-wsr-c136="" disabled="disabled" value="">
+                Please Select
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="AK"
+                class="ng-star-inserted"
+              >
+                AK
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="AL"
+                class="ng-star-inserted"
+              >
+                AL
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="AR"
+                class="ng-star-inserted"
+              >
+                AR
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="AZ"
+                class="ng-star-inserted"
+              >
+                AZ
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="CA"
+                class="ng-star-inserted"
+              >
+                CA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="CO"
+                class="ng-star-inserted"
+              >
+                CO
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="CT"
+                class="ng-star-inserted"
+              >
+                CT
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="DC"
+                class="ng-star-inserted"
+              >
+                DC
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="DE"
+                class="ng-star-inserted"
+              >
+                DE
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="FL"
+                class="ng-star-inserted"
+              >
+                FL
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="GA"
+                class="ng-star-inserted"
+              >
+                GA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="HI"
+                class="ng-star-inserted"
+              >
+                HI
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="IA"
+                class="ng-star-inserted"
+              >
+                IA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="ID"
+                class="ng-star-inserted"
+              >
+                ID
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="IL"
+                class="ng-star-inserted"
+              >
+                IL
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="IN"
+                class="ng-star-inserted"
+              >
+                IN
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="KS"
+                class="ng-star-inserted"
+              >
+                KS
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="KY"
+                class="ng-star-inserted"
+              >
+                KY
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="LA"
+                class="ng-star-inserted"
+              >
+                LA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="MA"
+                class="ng-star-inserted"
+              >
+                MA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="MD"
+                class="ng-star-inserted"
+              >
+                MD
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="ME"
+                class="ng-star-inserted"
+              >
+                ME
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="MI"
+                class="ng-star-inserted"
+              >
+                MI
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="MN"
+                class="ng-star-inserted"
+              >
+                MN
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="MO"
+                class="ng-star-inserted"
+              >
+                MO
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="MS"
+                class="ng-star-inserted"
+              >
+                MS
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="MT"
+                class="ng-star-inserted"
+              >
+                MT
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="NC"
+                class="ng-star-inserted"
+              >
+                NC
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="ND"
+                class="ng-star-inserted"
+              >
+                ND
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="NE"
+                class="ng-star-inserted"
+              >
+                NE
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="NH"
+                class="ng-star-inserted"
+              >
+                NH
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="NJ"
+                class="ng-star-inserted"
+              >
+                NJ
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="NM"
+                class="ng-star-inserted"
+              >
+                NM
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="NV"
+                class="ng-star-inserted"
+              >
+                NV
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="NY"
+                class="ng-star-inserted"
+              >
+                NY
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="OH"
+                class="ng-star-inserted"
+              >
+                OH
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="OK"
+                class="ng-star-inserted"
+              >
+                OK
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="OR"
+                class="ng-star-inserted"
+              >
+                OR
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="PA"
+                class="ng-star-inserted"
+              >
+                PA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="RI"
+                class="ng-star-inserted"
+              >
+                RI
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="SC"
+                class="ng-star-inserted"
+              >
+                SC
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="SD"
+                class="ng-star-inserted"
+              >
+                SD
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="TN"
+                class="ng-star-inserted"
+              >
+                TN
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="TX"
+                class="ng-star-inserted"
+              >
+                TX
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="UT"
+                class="ng-star-inserted"
+              >
+                UT
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="VA"
+                class="ng-star-inserted"
+              >
+                VA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="VT"
+                class="ng-star-inserted"
+              >
+                VT
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="WA"
+                class="ng-star-inserted"
+              >
+                WA
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="WI"
+                class="ng-star-inserted"
+              >
+                WI
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="WV"
+                class="ng-star-inserted"
+              >
+                WV
+              </option>
+              <option
+                _ngcontent-wsr-c136=""
+                value="WY"
+                class="ng-star-inserted"
+              >
+                WY
+              </option>
+              <!---->
+            </select>
+            <div _ngcontent-wsr-c136="" class="input-group-append">
+              <div _ngcontent-wsr-c136="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          _ngcontent-wsr-c144=""
+          class="form-group col-sm-12 col-md-4 col-lg-5"
+        >
+          <label _ngcontent-wsr-c144="" for="phone">Mobile phone number</label>
+          <div _ngcontent-wsr-c144="" class="input-group">
+            <input
+              _ngcontent-wsr-c144=""
+              id="phone"
+              type="tel"
+              phonenumber=""
+              formcontrolname="phone"
+              placeholder="555-555-5555"
+              maxlength="12"
+              mask="ZZZ-ZZZ-0000"
+              required=""
+              autofocus=""
+              class="form-control ng-pristine ng-invalid ng-touched"
+            />
+            <div _ngcontent-wsr-c144="" class="input-group-append">
+              <div _ngcontent-wsr-c144="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          _ngcontent-wsr-c144=""
+          class="form-group col-sm-12 col-md-5 col-lg-5"
+        >
+          <label _ngcontent-wsr-c144="" for="email">Email address</label>
+          <div _ngcontent-wsr-c144="" class="input-group">
+            <input
+              _ngcontent-wsr-c144=""
+              id="email"
+              type="email"
+              aria-describedby="input-error"
+              s=""
+              formcontrolname="email"
+              placeholder="your@address.com"
+              required=""
+              class="form-control ng-untouched ng-pristine ng-invalid"
+            />
+            <div _ngcontent-wsr-c144="" class="input-group-append">
+              <div _ngcontent-wsr-c144="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-wsr-c144="" class="form-group col-9 col-md-6">
+          <label _ngcontent-wsr-c144="" for="md-street"
+            >Street Address, City, State, Zip</label
+          >
+          <div _ngcontent-wsr-c144="" class="input-group">
+            <input
+              _ngcontent-wsr-c144=""
+              autocapitalize="off"
+              autocorrect="off"
+              role="combobox"
+              aria-multiline="false"
+              id="md-street"
+              type="text"
+              aria-describedby="input-error"
+              formcontrolname="street"
+              autofocus=""
+              class="form-control ng-pristine ng-invalid ng-touched"
+              autocomplete="off"
+              aria-autocomplete="list"
+              aria-expanded="false"
+            /><!---->
+            <div _ngcontent-wsr-c144="" class="input-group-append">
+              <div _ngcontent-wsr-c144="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-wsr-c144="" class="form-group col-3">
+          <label _ngcontent-wsr-c144="" for="md-unit-number">Apt #</label>
+          <div _ngcontent-wsr-c144="" class="input-group">
+            <input
+              _ngcontent-wsr-c144=""
+              id="md-unit-number"
+              type="text"
+              formcontrolname="unitNumber"
+              aria-describedby="input-error"
+              aria-label="Apartment number"
+              class="form-control ng-untouched ng-pristine ng-valid"
+            />
+            <div _ngcontent-wsr-c144="" class="input-group-append">
+              <div _ngcontent-wsr-c144="" class="input-group-text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------Nationwide HomePage Information-------------------->
+
+      <div id="homepage" class="sub-field" style="display: none">
+        <input
+          id="loc_q"
+          name="q"
+          type="tel"
+          class="column small-12 nw__find-agent-zip-field"
+          pattern="[0-9]"
+          placeholder="ZIP Code"
+          maxlength="10"
+          autocomplete="off"
+          aria-describedby="zip-code-validation"
+          aria-live="polite"
+          aria-label="Enter Zip"
+        />
+      </div>
+
+      <!------------------------Nationwide ClaimForm Information-------------------->
+
+      <div id="claimform" class="sub-field" style="display: none">
+        <ol>
+          <li class=" ">
+            <label for="firstName">
+              <abbr class="required" title="Required Field">*</abbr>
+              First
+            </label>
+            <span></span>
+            <input
+              maxlength="50"
+              id="firstName"
+              name="deathClaimTO.deceasedInfo.personName.firstName"
+              size="30"
+              type="text"
+              value=""
+            />
+          </li>
+          <li class="initials">
+            <label for="middleInitial">MI</label>
+            <span></span
+            ><input
+              maxlength="1"
+              id="middleInitial"
+              name="deathClaimTO.deceasedInfo.personName.middleInitial"
+              size="10"
+              type="text"
+              value=""
+            />
+          </li>
+          <li class=" ">
+            <label for="lastName">
+              <abbr class="required" title="Required Field">*</abbr>
+              Last
+            </label>
+            <span></span
+            ><input
+              maxlength="49"
+              id="lastName"
+              name="deathClaimTO.deceasedInfo.personName.lastName"
+              size="30"
+              type="text"
+              value=""
+            />
+          </li>
+          <li class="initials">
+            <label for="suffix"> Suffix </label>
+            <span></span
+            ><input
+              maxlength="4"
+              id="suffix"
+              name="deathClaimTO.deceasedInfo.personName.suffix"
+              size="4"
+              type="text"
+              value=""
+            />
+          </li>
+        </ol>
+        <label for="residenceState"> State of Residence </label>
+        <select
+          class="transformed ui-state-valid hasCustomSelect"
+          maxlength="3"
+          id="residenceState"
+          name="deathClaimTO.deceasedInfo.residenceState"
+          style="
+            appearance: menulist-button;
+            width: 87px;
+            position: absolute;
+            opacity: 0;
+            height: 42px;
+            font-size: 16px;
+          "
+        >
+          <option value="" selected="selected">State</option>
+          <option value="AK">AK</option>
+          <option value="AL">AL</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="DC">DC</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="MA">MA</option>
+          <option value="MD">MD</option>
+          <option value="ME">ME</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MO">MO</option>
+          <option value="MS">MS</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VA">VA</option>
+          <option value="VT">VT</option>
+          <option value="WA">WA</option>
+          <option value="WI">WI</option>
+          <option value="WV">WV</option>
+          <option value="WY">WY</option>
+        </select>
+
+        <legend id="legendContainer_name_legend" class="errors">
+          Name of Claimant
+          <strong
+            id="claimant_name_error"
+            class="fieldLevelError"
+            style="display: none"
+          >
+            <span>Error</span>
+          </strong>
+        </legend>
+        <ol>
+          <li class=" ">
+            <label for="firstNameClaimant">
+              <abbr class="required" title="Required Field">*</abbr>
+              First
+            </label>
+            <span></span
+            ><input
+              maxlength="50"
+              id="firstNameClaimant"
+              name="deathClaimTO.claimantInfo.personName.firstName"
+              size="30"
+              type="text"
+              value=""
+            />
+          </li>
+          <li class="initials">
+            <label for="middleInitialClaimant">MI </label>
+            <span></span
+            ><input
+              maxlength="1"
+              id="middleInitialClaimant"
+              name="deathClaimTO.claimantInfo.personName.middleInitial"
+              size="30"
+              type="text"
+              value=""
+            />
+          </li>
+          <li class=" ">
+            <label for="lastNameClaimant">
+              <abbr class="required" title="Required Field">*</abbr>
+              Last
+            </label>
+            <span></span
+            ><input
+              maxlength="49"
+              id="lastNameClaimant"
+              name="deathClaimTO.claimantInfo.personName.lastName"
+              size="30"
+              type="text"
+              value=""
+            />
+          </li>
+          <li class="initials">
+            <label for="suffixClaimant"> Suffix </label>
+            <span></span
+            ><input
+              maxlength="4"
+              id="suffixClaimant"
+              name="deathClaimTO.claimantInfo.personName.suffix"
+              size="4"
+              type="text"
+              value=""
+            />
+          </li>
+        </ol>
+        <fieldset class="bordered">
+          <legend id="legendContainer_address_legend" class="errors">
+            Address of Claimant
+            <strong
+              id="claimant_address_error"
+              class="fieldLevelError"
+              style="display: none"
+            >
+              <span>Error</span>
+            </strong>
+          </legend>
+          <ol>
+            <li class="streetAddress">
+              <label for="claimantAddress1">
+                <abbr class="required" title="Required Field">*</abbr>
+                Address
+              </label>
+              <span></span
+              ><input
+                maxlength="100"
+                id="claimantAddress1"
+                name="deathClaimTO.claimantInfo.address.address1"
+                size="30"
+                type="text"
+                value=""
+              />
+              <input type="hidden" id="claimantAddress1ErrorMessage" value="" />
+            </li>
+
+            <li class="aptNumber">
+              <label for="aptClaimant"> Apt/Unit # </label>
+              <span></span
+              ><input
+                maxlength="10"
+                id="aptClaimant"
+                type="text"
+                name="deathClaimTO.claimantInfo.address.address2"
+                value=""
+              />
+              <input type="hidden" id="claimantAddress2ErrorMessage" value="" />
+            </li>
+
+            <li class="clear">
+              <label for="claimantCity">
+                <abbr class="required" title="Required Field">*</abbr>
+                City
+              </label>
+              <span></span
+              ><input
+                maxlength="20"
+                id="claimantCity"
+                size="30"
+                type="text"
+                name="deathClaimTO.claimantInfo.address.city"
+                value=""
+              />
+              <input type="hidden" id="claimantCityErrorMessage" value="" />
+            </li>
+
+            <li class="state">
+              <label for="claimantState">
+                State
+                <abbr class="required" title="Required Field">*</abbr>
+              </label>
+              <div class="selectWrapper">
+                <select
+                  class="transformed ui-state-valid hasCustomSelect"
+                  id="claimantState"
+                  name="deathClaimTO.claimantInfo.address.stateAbbreviation"
+                  style="
+                    appearance: menulist-button;
+                    width: 87px;
+                    position: absolute;
+                    opacity: 0;
+                    height: 42px;
+                    font-size: 16px;
+                  "
+                >
+                  <option value="">State</option>
+                  <option value="AK">AK</option>
+                  <option value="AL">AL</option>
+                  <option value="AZ">AZ</option>
+                  <option value="AR">AR</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DE">DE</option>
+                  <option value="DC">DC</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="IA">IA</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NE">NE</option>
+                  <option value="NV">NV</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NY">NY</option>
+                  <option value="NC">NC</option>
+                  <option value="ND">ND</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VA">VA</option>
+                  <option value="VT">VT</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option></select
+                ><span
+                  class="customSelect transformed ui-state-valid"
+                  style="display: inline-block"
+                  ><span
+                    class="customSelectInner"
+                    style="width: 75px; display: inline-block"
+                    >State</span
+                  ></span
+                >
+              </div>
+              <input
+                type="hidden"
+                id="claimantStateAbbreviationErrorMessage"
+                value=""
+              />
+              <input type="hidden" id="claimantStateAbbreviation" value="" />
+            </li>
+
+            <li class="zipCode">
+              <label for="claimantZipCode">
+                <abbr class="required" title="Required Field">*</abbr>
+                Zip
+              </label>
+              <span></span
+              ><input
+                maxlength="10"
+                id="claimantZipCode"
+                size="30"
+                type="text"
+                name="deathClaimTO.claimantInfo.address.zipCode"
+                value=""
+              />
+              <input type="hidden" id="claimantZipCodeErrorMessage" value="" />
+            </li>
+          </ol>
+        </fieldset>
+        <label for="claimantPhone">
+          <abbr class="required" title="Required Field">*</abbr>
+          Phone Number (123-123-1234)
+        </label>
+        <input
+          maxlength="12"
+          id="claimantPhone"
+          name="deathClaimTO.claimantInfo.phoneNumber"
+          size="25"
+          type="text"
+          value=""
+        /><br />
+        <label for="claimantEmail">
+          <abbr class="required" title="Required Field">*</abbr>
+          Email Address (smith@gmail.com)
+        </label>
+        <input
+          maxlength="50"
+          id="claimantEmail"
+          name="deathClaimTO.claimantInfo.emailAddress"
+          size="33"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,602 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Wish</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'payment')"
+        >
+          <h2><b>Payment</b></h2>
+        </button>
+      </div>
+      <!------------------------Walmart SignUp-------------------->
+      <div id="signin" class="sub-field" style="display: none">
+        <label for="loginId" class="ml1 b f6">Email Address</label>
+        <input
+          type="email"
+          id="ld_ui_textfield_130453"
+          value=""
+          autocomplete="email"
+          name="Email Address"
+          aria-label="Email Address"
+          class="w_ZjHt"
+        />
+      </div>
+      <!------------------------Walmart SignIn-------------------->
+      <div id="signup" class="sub-field" style="display: none">
+        <label for="loginId" class="ml1 b f6">Email Address</label>
+        <input
+          type="email"
+          id="ld_ui_textfield_130453"
+          value=""
+          autocomplete="email"
+          name="Email Address"
+          aria-label="Email Address"
+          class="w_ZjHt"
+        /><br />
+        <label for="firstName" aria-label="First name" class="b"
+          >First name</label
+        >
+        <input
+          type="text"
+          id="ld_ui_textfield_132018"
+          value=""
+          autocomplete="given-name"
+          maxlength="25"
+          name="firstName"
+          aria-label="First name"
+          class="w_ZjHt"
+        /><br />
+        <label for="lastName" aria-label="Last name" class="b">Last name</label>
+        <input
+          type="text"
+          id="ld_ui_textfield_132019"
+          value=""
+          autocomplete="family-name"
+          maxlength="25"
+          name="lastName"
+          aria-label="Last name"
+          class="w_ZjHt"
+        /><br />
+
+        <label for="password" class="b">Create a password</label>
+        <input
+          type="password"
+          id="ld_ui_textfield_132021"
+          value=""
+          autocomplete="new-password"
+          name="newPassword"
+          required=""
+          aria-describedby="instructions"
+          aria-label="Create a password"
+          class="w_ZjHt"
+        /><br />
+      </div>
+
+      <!------------------------Walmart Checkout-------------------->
+      <div id="checkout" class="sub-field" style="display: none">
+        <b>Shipping Address:</b>
+        <div class="w_QPqP mr0">
+          <label class="w_BAii w_eFeR" for="react-aria-13"
+            ><span class="w_aU55">First name*</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-13"
+              type="text"
+              autocomplete="given-name"
+              maxlength="25"
+              name="firstName"
+              required=""
+              aria-required="true"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="w_QPqP mr0">
+          <label class="w_BAii w_eFeR" for="react-aria-14"
+            ><span class="w_aU55">Last name*</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-14"
+              type="text"
+              autocomplete="family-name"
+              maxlength="25"
+              name="lastName"
+              required=""
+              aria-required="true"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="css-2b097c-container">
+          <div class="w_QPqP mr0" data-automation-id="street-add">
+            <label class="w_BAii w_eFeR" for="addressLineOne"
+              ><span class="w_aU55">Street address*</span></label
+            >
+            <div class="w_DoEs">
+              <input
+                id="addressLineOne"
+                type="text"
+                autocomplete="new-password"
+                required=""
+                name="addressLineOne"
+                maxlength="50"
+                class="w_V2kW"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="w_QPqP mr0">
+          <label class="w_BAii w_eFeR" for="react-aria-15"
+            ><span class="w_aU55">Apt, suite, etc. (optional)</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-15"
+              type="text"
+              autocomplete="address-line2"
+              maxlength="50"
+              name="addressLineTwo"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="w_QPqP mr0">
+          <label class="w_BAii w_eFeR" for="react-aria-16"
+            ><span class="w_aU55">City*</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-16"
+              type="text"
+              autocomplete="address-level2"
+              maxlength="30"
+              name="city"
+              required=""
+              aria-required="true"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="w_8rHH mr0">
+          <label class="w_EKYK" for="react-aria-17"
+            ><span class="w_6Bb4">State*</span></label
+          ><select
+            id="react-aria-17"
+            autocomplete="address-level1"
+            name="state"
+            required=""
+            aria-required="true"
+            class="w_IGbn"
+          >
+            <option value="">State</option>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DC">DC</option>
+            <option value="DE">DE</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+            <option value="AA">AA</option>
+            <option value="AP">AP</option>
+            <option value="AE">AE</option>
+            <option value="AS">AS</option>
+            <option value="GU">GU</option>
+            <option value="MP">MP</option>
+            <option value="PW">PW</option>
+            <option value="PR">PR</option>
+            <option value="VI">VI</option>
+          </select>
+        </div>
+        <div class="w_QPqP ml2">
+          <label class="w_BAii w_eFeR" for="react-aria-18"
+            ><span class="w_aU55">Zip code*</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-18"
+              type="text"
+              autocomplete="postal-code"
+              inputmode="numeric"
+              maxlength="5"
+              size="5"
+              name="postalCode"
+              required=""
+              aria-required="true"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="w_QPqP mr3-m">
+          <label class="w_BAii w_eFeR" for="react-aria-19"
+            ><span class="w_aU55">Phone number*</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-19"
+              type="tel"
+              autocomplete="tel"
+              maxlength="14"
+              name="phone"
+              required=""
+              aria-required="true"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+        <!------------------------Walmart BillingAddress-------------------->
+        <b>Billing Address:</b>
+        <div class="w_QPqP mr0" data-automation-id="street-add">
+          <label class="w_BAii w_eFeR" for="addressLineOne"
+            ><span class="w_aU55">Street address*</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="addressLineOne"
+              type="text"
+              autocomplete="new-password"
+              required=""
+              name="newBillingAddress.addressLineOne"
+              maxlength="50"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="w_QPqP pr2 w-50" name="newBillingAddress.addressLineTwo">
+          <label class="w_BAii w_eFeR" for="react-aria-40"
+            ><span class="w_aU55">Apt or unit</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-40"
+              autocomplete="address-line2"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="w_QPqP pl2 w-50"
+          data-automation-id="city"
+          name="newBillingAddress.city"
+        >
+          <label class="w_BAii w_eFeR" for="react-aria-41"
+            ><span class="w_aU55">City *</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-41"
+              autocomplete="address-level2"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="w_8rHH pr2 w-50"
+          data-automation-id="state-drop-down"
+          name="newBillingAddress.state"
+        >
+          <label class="w_EKYK" for="react-aria-42"
+            ><span class="w_6Bb4">State *</span></label
+          ><select
+            id="react-aria-42"
+            autocomplete="address-level1"
+            class="w_IGbn"
+          >
+            <option value="">State</option>
+            <option data-automation-id="state" value="AL">AL</option>
+            <option data-automation-id="state" value="AK">AK</option>
+            <option data-automation-id="state" value="AZ">AZ</option>
+            <option data-automation-id="state" value="AR">AR</option>
+            <option data-automation-id="state" value="CA">CA</option>
+            <option data-automation-id="state" value="CO">CO</option>
+            <option data-automation-id="state" value="CT">CT</option>
+            <option data-automation-id="state" value="DC">DC</option>
+            <option data-automation-id="state" value="DE">DE</option>
+            <option data-automation-id="state" value="FL">FL</option>
+            <option data-automation-id="state" value="GA">GA</option>
+            <option data-automation-id="state" value="HI">HI</option>
+            <option data-automation-id="state" value="ID">ID</option>
+            <option data-automation-id="state" value="IL">IL</option>
+            <option data-automation-id="state" value="IN">IN</option>
+            <option data-automation-id="state" value="IA">IA</option>
+            <option data-automation-id="state" value="KS">KS</option>
+            <option data-automation-id="state" value="KY">KY</option>
+            <option data-automation-id="state" value="LA">LA</option>
+            <option data-automation-id="state" value="ME">ME</option>
+            <option data-automation-id="state" value="MD">MD</option>
+            <option data-automation-id="state" value="MA">MA</option>
+            <option data-automation-id="state" value="MI">MI</option>
+            <option data-automation-id="state" value="MN">MN</option>
+            <option data-automation-id="state" value="MS">MS</option>
+            <option data-automation-id="state" value="MO">MO</option>
+            <option data-automation-id="state" value="MT">MT</option>
+            <option data-automation-id="state" value="NE">NE</option>
+            <option data-automation-id="state" value="NV">NV</option>
+            <option data-automation-id="state" value="NH">NH</option>
+            <option data-automation-id="state" value="NJ">NJ</option>
+            <option data-automation-id="state" value="NM">NM</option>
+            <option data-automation-id="state" value="NY">NY</option>
+            <option data-automation-id="state" value="NC">NC</option>
+            <option data-automation-id="state" value="ND">ND</option>
+            <option data-automation-id="state" value="OH">OH</option>
+            <option data-automation-id="state" value="OK">OK</option>
+            <option data-automation-id="state" value="OR">OR</option>
+            <option data-automation-id="state" value="PA">PA</option>
+            <option data-automation-id="state" value="RI">RI</option>
+            <option data-automation-id="state" value="SC">SC</option>
+            <option data-automation-id="state" value="SD">SD</option>
+            <option data-automation-id="state" value="TN">TN</option>
+            <option data-automation-id="state" value="TX">TX</option>
+            <option data-automation-id="state" value="UT">UT</option>
+            <option data-automation-id="state" value="VT">VT</option>
+            <option data-automation-id="state" value="VA">VA</option>
+            <option data-automation-id="state" value="WA">WA</option>
+            <option data-automation-id="state" value="WV">WV</option>
+            <option data-automation-id="state" value="WI">WI</option>
+            <option data-automation-id="state" value="WY">WY</option>
+            <option data-automation-id="state" value="AA">AA</option>
+            <option data-automation-id="state" value="AP">AP</option>
+            <option data-automation-id="state" value="AE">AE</option>
+            <option data-automation-id="state" value="AS">AS</option>
+            <option data-automation-id="state" value="GU">GU</option>
+            <option data-automation-id="state" value="MP">MP</option>
+            <option data-automation-id="state" value="PW">PW</option>
+            <option data-automation-id="state" value="PR">PR</option>
+            <option data-automation-id="state" value="VI">VI</option>
+          </select>
+        </div>
+        <div class="w_QPqP pl2 w-50">
+          <label class="w_BAii w_eFeR" for="react-aria-43"
+            ><span class="w_aU55">Zip code *</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-43"
+              autocomplete="postal-code"
+              maxlength="5"
+              size="5"
+              inputmode="numeric"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <!------------------------Walmart Payment-------------------->
+      <div id="payment" class="sub-field" style="display: none">
+        <div class="w_QPqP">
+          <label class="w_BAii" for="cc-number"
+            ><span class="w_aU55">Card number *</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="cc-number"
+              autocomplete="cc-number"
+              inputmode="numeric"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="w_QPqP pr2-xl mb3 mb0-xl" name="firstName">
+          <label class="w_BAii w_eFeR" for="react-aria-35"
+            ><span class="w_aU55">First name *</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-35"
+              autocomplete="cc-given-name"
+              class="w_V2kW w-100"
+              maxlength="25"
+              name="firstName"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="w_QPqP pl2-xl" name="lastName">
+          <label class="w_BAii w_eFeR" for="react-aria-36"
+            ><span class="w_aU55">Last name *</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-36"
+              autocomplete="cc-family-name"
+              class="w_V2kW w-100"
+              maxlength="25"
+              name="lastName"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="w_8rHH">
+          <label class="w_EKYK" for="react-aria-37"
+            ><span class="w_6Bb4">MM *</span></label
+          ><select
+            id="react-aria-37"
+            autocomplete="cc-exp-month"
+            class="w_IGbn"
+          >
+            <option value="">MM</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+
+        <div class="w_8rHH">
+          <label class="w_EKYK" for="react-aria-38"
+            ><span class="w_6Bb4">YY *</span></label
+          ><select id="react-aria-38" autocomplete="cc-exp-year" class="w_IGbn">
+            <option value="">YY</option>
+            <option value="2023">23</option>
+            <option value="2024">24</option>
+            <option value="2025">25</option>
+            <option value="2026">26</option>
+            <option value="2027">27</option>
+            <option value="2028">28</option>
+            <option value="2029">29</option>
+            <option value="2030">30</option>
+            <option value="2031">31</option>
+            <option value="2032">32</option>
+            <option value="2033">33</option>
+            <option value="2034">34</option>
+            <option value="2035">35</option>
+            <option value="2036">36</option>
+            <option value="2037">37</option>
+            <option value="2038">38</option>
+            <option value="2039">39</option>
+            <option value="2040">40</option>
+            <option value="2041">41</option>
+            <option value="2042">42</option>
+          </select>
+        </div>
+        <div class="w_y4Pl" data-automation-id="cvv">
+          <label class="w_iyCD w__XNG" for="ld_ui_textfield_0"
+            ><span class="w__tXl">CVV *</span></label
+          >
+          <div class="w_VCAX">
+            <input
+              id="ld_ui_textfield_0"
+              type="password"
+              autocomplete="cc-csc"
+              maxlength="3"
+              name="cvv"
+              inputmode="numeric"
+              class="w_ZjHt"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="w_QPqP" data-automation-id="phone-number">
+          <label class="w_BAii w_eFeR" for="react-aria-39"
+            ><span class="w_aU55">Phone number*</span></label
+          >
+          <div class="w_DoEs">
+            <input
+              id="react-aria-39"
+              type="tel"
+              autocomplete="tel-national"
+              maxlength="14"
+              class="w_V2kW"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

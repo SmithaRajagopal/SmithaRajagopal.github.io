@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <br /><br />
+    <h1>
+        <center>
+            <p class="center"><b>Checkout Information</b></p>
+        </center>
+    </h1>
+    <br />
+    <!------------------------ Checkout Information-------------------->
+
+
+    <div class="MuiFormControl-root MuiTextField-root jss2991" style="background: white">
+        <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+            data-shrink="false" for="email" id="email-label">Email<span aria-hidden="true"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span></label>
+        <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+            <input aria-invalid="false" autocomplete="email" id="email" required="" type="text" aria-label="Email"
+                class="MuiInputBase-input MuiOutlinedInput-input" value="" />
+        </div>
+    </div>
+
+    <div class="MuiBox-root jss2997">
+        <form>
+            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-justify-content-xs-space-between">
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6">
+                    <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                        <label
+                            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                            data-shrink="false" for="firstname" id="firstname-label">First Name *</label>
+                        <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                            <input aria-invalid="false" autocomplete="given-name" id="firstname" type="text"
+                                aria-label="First Name" class="MuiInputBase-input MuiOutlinedInput-input" value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6">
+                    <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                        <label
+                            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                            data-shrink="false" for="lastname" id="lastname-label">Last Name *</label>
+                        <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                            <input aria-invalid="false" autocomplete="family-name" id="lastname" type="text"
+                                aria-label="Last Name" class="MuiInputBase-input MuiOutlinedInput-input" value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12">
+                    <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                        <label
+                            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                            data-shrink="false" for="street1" id="street1-label">Address 1 *</label>
+                        <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                            <input aria-invalid="false" autocomplete="off" id="street1" type="text"
+                                aria-label="Address 1"
+                                class="MuiInputBase-input MuiOutlinedInput-input pac-target-input" value=""
+                                placeholder="Enter a location" />
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6">
+                        <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                            <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                                data-shrink="false" for="country" id="country-label">Country *</label>
+                            <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                                <input aria-invalid="false" autocomplete="country" id="country" type="text"
+                                    aria-label="Country" class="MuiInputBase-input MuiOutlinedInput-input" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6">
+                        <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                            <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                                data-shrink="false" for="address-level2" id="address-level2">City *</label>
+                            <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                                <input aria-invalid="false" autocomplete="address-level2" id="city" type="text"
+                                    aria-label="City" class="MuiInputBase-input MuiOutlinedInput-input css-1pog434"
+                                     data-iomd="city" data-event="true">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6">
+                        <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                            <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                                data-shrink="false" for="state" id="state-label">State *</label>
+                            <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                                <input aria-invalid="false" autocomplete="region" id="state" type="text"
+                                    aria-label="State" class="MuiInputBase-input MuiOutlinedInput-input" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6">
+                        <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                            <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                                data-shrink="false" for="zipcode" id="postal-code">Zipcode *</label>
+                            <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                                <input aria-invalid="true" autocomplete="postal-code" id="postcode" type="text"
+                                    aria-label="Postal/Zip Code"
+                                    class="MuiInputBase-input MuiOutlinedInput-input css-1pog434" value=""
+                                    data-iomd="postalCode" data-event="true" aria-describedby="postcode-helper-text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12">
+                        <div class="MuiFormControl-root MuiTextField-root" style="background: white">
+                            <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                                data-shrink="false" for="telephone" id="telephone-label">Phone Number *</label>
+                            <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                                <input aria-invalid="false" autocomplete="shipping tel" id="telephone" type="text"
+                                    aria-label="Phone Number" class="MuiInputBase-input MuiOutlinedInput-input"
+                                    value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

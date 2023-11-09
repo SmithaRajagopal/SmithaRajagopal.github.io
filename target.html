@@ -1,0 +1,903 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <br /><br />
+    <h1>
+        <center>
+            <p class="center"><b>Target</b></p>
+        </center>
+    </h1>
+    <br />
+    <div id="target" class="field">
+        <div id="tab">
+            <div id="field">
+                <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'targetsignup')">
+                    <h2><b>Sign Up</b></h2>
+                </button>
+
+                <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'targetsignin')">
+                    <h2><b>Sign In</b></h2>
+                </button>
+
+                <button class="subtab tablinks titlecontent"
+                    onclick="openSubComponent(event, 'targetcheckoutandpayment')">
+                    <h2><b>Checkout And Payment</b></h2>
+                </button>
+
+
+                <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'targetforgotpassword')">
+                    <h2><b>Forgot Password</b></h2>
+                </button>
+
+                <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'targetredcardapply')">
+                    <h2><b>Redcard Apply</b></h2>
+                </button>
+            </div>
+
+            <!----------------------------Target SignUp----------------------->
+
+            <div id="targetsignup" class="sub-field" style="display: none">
+
+                <form data-test="form-submit" method="post" novalidate="">
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__GspInput-sc-1ltb4ye-2 GuRwp"><label
+                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="username">Email address<span
+                                aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="off" autocorrect="off" class="styles__GspInput-sc-1ltb4ye-2 GuRwp"
+                            id="username" inputmode="email" maxlength="254" name="usernamecreateaccount" type="text"
+                            value=""></div>
+                    <div class="styles__LeftAlignDiv-sc-1uq54gg-0 dlyDGs"></div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__GspInput-sc-1ltb4ye-2 GuRwp"><label
+                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="firstname">First name<span
+                                aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="off" autocorrect="off" class="styles__GspInput-sc-1ltb4ye-2 GuRwp"
+                            id="firstname" maxlength="40" minlength="5" name="firstnamecreateaccount" type="text"
+                            value=""></div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__GspInput-sc-1ltb4ye-2 GuRwp"><label
+                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="lastname">Last name<span
+                                aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="off" autocorrect="off" class="styles__GspInput-sc-1ltb4ye-2 GuRwp"
+                            id="lastname" maxlength="40" minlength="5" name="lastnamecreateaccount" type="text"
+                            value=""></div>
+                    <div class="styles__PhoneNumberMarginDiv-sc-1ltb4ye-5 bSQgIm">
+                        <div class="InputWrapper-sc-1sqxq26-0 exwYmr"><label
+                                class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="phone">Mobile phone number
+                                (optional)<span aria-atomic="true" aria-live="assertive"
+                                    class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                autocapitalize="none" autocomplete="on" autocorrect="off" id="phone" maxlength="14"
+                                name="phonecreateAccount" type="tel" value=""><span
+                                class="Input__LeftContentWrapper-sc-1359ied-1 fNNPYH"><span
+                                    class="Icon-1198e736__IconWrapper-sc-ti6595-0 hpKrQq"
+                                    data-icon-name="ProfileAmericanFlag" fill="#000000" size="30"
+                                    style="margin-bottom: 2px; margin-left: 4px;">
+
+                                </span></span></div>
+                    </div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu h-text-left"><label
+                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="password">Create password<span
+                                aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocapitalize="none" autocomplete="new-password" autocorrect="off" class="h-text-left"
+                            id="password" maxlength="20" name="passwordcreateaccount" type="password" value="">
+
+                    </div>
+
+
+
+                </form>
+
+            </div>
+
+
+            <!----------------------------Target SignIn----------------------->
+
+            <div id="targetsignin" class="sub-field" style="display: none">
+
+                <form method="post" novalidate="">
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__AuthInput-sc-1cs4obc-0 bcxvHq"><label
+                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="username">Email or mobile phone<span
+                                aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="username" autocorrect="off" class="styles__AuthInput-sc-1cs4obc-0 bcxvHq"
+                            id="username" inputmode="email" maxlength="254" minlength="1" name="username" required=""
+                            type="text" value=""></div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__AuthInput-sc-1cs4obc-0 bcxvHq"><label
+                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="password">Password<span
+                                aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocapitalize="none" autocomplete="current-password" autocorrect="off"
+                            class="styles__AuthInput-sc-1cs4obc-0 bcxvHq" id="password" maxlength="20" minlength="1"
+                            name="password" type="password" value="">
+                    </div>
+                </form>
+
+
+            </div>
+
+
+            <!--------------------------Target Checkout---------------------->
+
+            <div id="targetcheckoutandpayment" class="sub-field" style="display: none">
+
+                <fieldset class="RadioGroup__RadioGroupWrap-sc-1xx5vc9-1 cELEOW">
+
+                    <div
+                        class="styles__BaseCellWrapper-sc-w7q25x-0 bcDOUc styles__StyledBaseCell-sc-1evqdt0-2 llumdq styles__CreditDebitCellStandard-sc-zltd9a-5 gYkull">
+                        <span class="styles__LeadingWrapper-sc-1evqdt0-3 khHGhw">
+                            <h4 class="Heading__StyledHeading-sc-1ihrzmk-0 eGDVtf"><b>Payment</b></h4>
+                            <div class="styles__FullRowDiv-sc-zltd9a-12 iNqeKH h-margin-t-tight">
+                                <div class="styles__FullRowDiv-sc-zltd9a-12 iNqeKH">
+                                    <div class="InputWrapper-sc-1sqxq26-0 lixWfK axiom-checkout-element-disabled"><label
+                                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                            for="credit-card-number-input">Card number<span aria-atomic="true"
+                                                aria-live="assertive"
+                                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                            autocapitalize="none" autocomplete="off" autocorrect="off"
+                                            class="axiom-checkout-element-disabled" id="credit-card-number-input"
+                                            inputmode="numeric" maxlength="19" name="credit-card-number-input"
+                                            type="tel" value="">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="styles__FullRowDiv-sc-zltd9a-12 iNqeKH">
+                                <div
+                                    class="InputWrapper-sc-1sqxq26-0 dDMYUu h-padding-b-x2 h-padding-t-tight axiom-checkout-element-disabled">
+                                    <label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                        for="credit-card-expiration-input">Exp MM/YY<span aria-atomic="true"
+                                            aria-live="assertive"
+                                            class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                        autocapitalize="none" autocomplete="cc-exp" autocorrect="off"
+                                        class="h-padding-b-x2 h-padding-t-tight axiom-checkout-element-disabled"
+                                        id="credit-card-expiration-input" maxlength="5"
+                                        name="credit-card-expiration-input" type="tel" data-scrub="true" value="">
+                                </div>
+                            </div>
+                            <div
+                                class="InputWrapper-sc-1sqxq26-0 lixWfK styles__StyledInput-sc-zltd9a-11 crSEdj axiom-checkout-element-disabled">
+                                <label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="credit-card-cvv-input">Enter
+                                    CVV<span aria-atomic="true" aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                    autocapitalize="none" autocomplete="off" autocorrect="off"
+                                    class="styles__StyledInput-sc-zltd9a-11 crSEdj axiom-checkout-element-disabled"
+                                    id="credit-card-cvv-input" inputmode="numeric" name="credit-card-cvv-input"
+                                    pattern="[0-9]*" type="tel" data-scrub="true" value="">
+
+                            </div>
+                            <div
+                                class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__StyledInput-sc-zltd9a-11 crSEdj axiom-checkout-element-disabled">
+                                <label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="credit-card-name-input">Name
+                                    on card<span aria-atomic="true" aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                    autocomplete="on" autocorrect="off"
+                                    class="styles__StyledInput-sc-zltd9a-11 crSEdj axiom-checkout-element-disabled"
+                                    id="credit-card-name-input" name="credit-card-name-input" type="text" value="">
+                            </div>
+
+                            <div class="styles__FullRowDiv-sc-zltd9a-12 iNqeKH h-padding-t-tight">
+                                <h4 class="Heading__StyledHeading-sc-1ihrzmk-0 eGDVtf"><b>Edit billing address</b></h4>
+                            </div>
+                            <div class="styles__FullRowDiv-sc-zltd9a-12 iNqeKH">
+                                <div class="styles__SelectOuterWrap-sc-3ox1i2-0 bVsPHH h-padding-v-x2">
+                                    <div display="block" class="styles__SelectWrap-sc-3ox1i2-1 iIwSK"><label
+                                            class="Label__StyledLabel-sc-1ahcu95-0 hCgzXE styles__SelectLabel-sc-3ox1i2-4 akTfN"
+                                            for="billing-address-country-input">Country<span aria-atomic="true"
+                                                aria-live="assertive"
+                                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><select
+                                            name="billing-address-country-input" id="billing-address-country-input"
+                                            class="styles__SelectInput-sc-3ox1i2-2 hpJEqU">
+                                            <option disabled="" value="">Country</option>
+                                            <option value="US">United States</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                            <option value="AR">Argentina</option>
+                                            <option value="AM">Armenia</option>
+                                            <option value="AW">Aruba</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="AT">Austria</option>
+                                            <option value="AZ">Azerbaijan</option>
+                                            <option value="BS">Bahamas</option>
+                                            <option value="BH">Bahrain</option>
+                                            <option value="BD">Bangladesh</option>
+                                            <option value="BB">Barbados</option>
+                                            <option value="BY">Belarus</option>
+                                            <option value="BE">Belgium</option>
+                                            <option value="BZ">Belize</option>
+                                            <option value="BJ">Benin</option>
+                                            <option value="BM">Bermuda</option>
+                                            <option value="BT">Bhutan</option>
+                                            <option value="BO">Bolivia</option>
+                                            <option value="BA">Bosnia and Herzegovina</option>
+                                            <option value="BW">Botswana</option>
+                                            <option value="BV">Bouvet Island</option>
+                                            <option value="BR">Brazil</option>
+                                            <option value="IO">British Indian Ocean Territory</option>
+                                            <option value="BN">Brunei</option>
+                                            <option value="BG">Bulgaria</option>
+                                            <option value="BF">Burkina Faso</option>
+                                            <option value="BI">Burundi</option>
+                                            <option value="KH">Cambodia</option>
+                                            <option value="CM">Cameroon</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="CV">Cape Verde</option>
+                                            <option value="KY">Cayman Islands</option>
+                                            <option value="CF">Central African Republic</option>
+                                            <option value="TD">Chad</option>
+                                            <option value="CL">Chile</option>
+                                            <option value="CN">China</option>
+                                            <option value="CX">Christmas Island</option>
+                                            <option value="CC">Cocos Islands</option>
+                                            <option value="CO">Colombia</option>
+                                            <option value="KM">Comoros</option>
+                                            <option value="CG">Congo</option>
+                                            <option value="CD">Congo, Democratic Republic of the</option>
+                                            <option value="CK">Cook Islands</option>
+                                            <option value="CR">Costa Rica</option>
+                                            <option value="CI">Cote d'Ivoire</option>
+                                            <option value="HR">Croatia</option>
+                                            <option value="CU">Cuba</option>
+                                            <option value="CY">Cyprus</option>
+                                            <option value="CZ">Czech Republic</option>
+                                            <option value="DK">Denmark</option>
+                                            <option value="DJ">Djibouti</option>
+                                            <option value="DM">Dominica</option>
+                                            <option value="DO">Dominican Republic</option>
+                                            <option value="TP">East Timor</option>
+                                            <option value="EC">Ecuador</option>
+                                            <option value="EG">Egypt</option>
+                                            <option value="SV">El Salvador</option>
+                                            <option value="GQ">Equatorial Guinea</option>
+                                            <option value="ER">Eritrea</option>
+                                            <option value="EE">Estonia</option>
+                                            <option value="ET">Ethiopia</option>
+                                            <option value="FK">Falkland Islands</option>
+                                            <option value="FO">Faroe Islands</option>
+                                            <option value="FJ">Fiji</option>
+                                            <option value="FI">Finland</option>
+                                            <option value="FR">France</option>
+                                            <option value="GF">French Guiana</option>
+                                            <option value="PF">French Polynesia</option>
+                                            <option value="TF">French Southern Territories</option>
+                                            <option value="GA">Gabon</option>
+                                            <option value="GM">Gambia</option>
+                                            <option value="GE">Georgia</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="GH">Ghana</option>
+                                            <option value="GI">Gibraltar</option>
+                                            <option value="GR">Greece</option>
+                                            <option value="GL">Greenland</option>
+                                            <option value="GD">Grenada</option>
+                                            <option value="GP">Guadeloupe</option>
+                                            <option value="GT">Guatemala</option>
+                                            <option value="GN">Guinea</option>
+                                            <option value="GW">Guinea-Bissau</option>
+                                            <option value="GY">Guyana</option>
+                                            <option value="HT">Haiti</option>
+                                            <option value="HM">Heard Island and Mcdonald Islands</option>
+                                            <option value="VA">Holy See</option>
+                                            <option value="HN">Honduras</option>
+                                            <option value="HK">Hong Kong S.A.R. of China</option>
+                                            <option value="HU">Hungary</option>
+                                            <option value="IS">Iceland</option>
+                                            <option value="IN">India</option>
+                                            <option value="ID">Indonesia</option>
+                                            <option value="IR">Iran</option>
+                                            <option value="IQ">Iraq</option>
+                                            <option value="IE">Ireland</option>
+                                            <option value="IL">Israel</option>
+                                            <option value="IT">Italy</option>
+                                            <option value="JM">Jamaica</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="JO">Jordan</option>
+                                            <option value="KZ">Kazakhstan</option>
+                                            <option value="KE">Kenya</option>
+                                            <option value="KI">Kiribati</option>
+                                            <option value="KP">Korea, North</option>
+                                            <option value="KR">Korea, South</option>
+                                            <option value="KW">Kuwait</option>
+                                            <option value="KG">Kyrgyzstan</option>
+                                            <option value="LA">Laos</option>
+                                            <option value="LV">Latvia</option>
+                                            <option value="LB">Lebanon</option>
+                                            <option value="LS">Lesotho</option>
+                                            <option value="LR">Liberia</option>
+                                            <option value="LY">Libya</option>
+                                            <option value="LI">Liechtenstein</option>
+                                            <option value="LT">Lithuania</option>
+                                            <option value="LU">Luxembourg</option>
+                                            <option value="MO">Macau S.A.R. of China</option>
+                                            <option value="MK">Macedonia</option>
+                                            <option value="MG">Madagascar</option>
+                                            <option value="MW">Malawi</option>
+                                            <option value="MY">Malaysia</option>
+                                            <option value="MV">Maldives</option>
+                                            <option value="ML">Mali</option>
+                                            <option value="MT">Malta</option>
+                                            <option value="MH">Marshall Islands</option>
+                                            <option value="MQ">Martinique</option>
+                                            <option value="MR">Mauritania</option>
+                                            <option value="MU">Mauritius</option>
+                                            <option value="YT">Mayotte</option>
+                                            <option value="MX">Mexico</option>
+                                            <option value="FM">Micronesia</option>
+                                            <option value="MD">Moldova</option>
+                                            <option value="MC">Monaco</option>
+                                            <option value="MN">Mongolia</option>
+                                            <option value="MS">Montserrat</option>
+                                            <option value="MA">Morocco</option>
+                                            <option value="MZ">Mozambique</option>
+                                            <option value="MM">Myanmar</option>
+                                            <option value="NA">Namibia</option>
+                                            <option value="NR">Nauru</option>
+                                            <option value="NP">Nepal</option>
+                                            <option value="NL">Netherlands</option>
+                                            <option value="AN">Netherlands Antilles</option>
+                                            <option value="NC">New Caledonia</option>
+                                            <option value="NZ">New Zealand</option>
+                                            <option value="NI">Nicaragua</option>
+                                            <option value="NE">Niger</option>
+                                            <option value="NG">Nigeria</option>
+                                            <option value="NU">Niue</option>
+                                            <option value="NF">Norfolk Island</option>
+                                            <option value="NO">Norway</option>
+                                            <option value="OM">Oman</option>
+                                            <option value="PK">Pakistan</option>
+                                            <option value="PW">Palau</option>
+                                            <option value="PS">Palestinian Territory</option>
+                                            <option value="PA">Panama</option>
+                                            <option value="PG">Papua New Guinea</option>
+                                            <option value="PY">Paraguay</option>
+                                            <option value="PE">Peru</option>
+                                            <option value="PH">Philippines</option>
+                                            <option value="PN">Pitcairn</option>
+                                            <option value="PL">Poland</option>
+                                            <option value="PT">Portugal</option>
+                                            <option value="QA">Qatar</option>
+                                            <option value="RE">Reunion</option>
+                                            <option value="RO">Romania</option>
+                                            <option value="RU">Russian Federation</option>
+                                            <option value="RW">Rwanda</option>
+                                            <option value="SH">Saint Helena</option>
+                                            <option value="KN">Saint Kitts and Nevis</option>
+                                            <option value="LC">Saint Lucia</option>
+                                            <option value="PM">Saint Pierre and Miquelon</option>
+                                            <option value="VC">Saint Vincent and the Grenadines</option>
+                                            <option value="WS">Samoa</option>
+                                            <option value="SM">San Marino</option>
+                                            <option value="ST">Sao Tome and Principe</option>
+                                            <option value="SA">Saudi Arabia</option>
+                                            <option value="SN">Senegal</option>
+                                            <option value="SC">Seychelles</option>
+                                            <option value="SL">Sierra Leone</option>
+                                            <option value="SG">Singapore</option>
+                                            <option value="SK">Slovakia</option>
+                                            <option value="SI">Slovenia</option>
+                                            <option value="SB">Solomon Islands</option>
+                                            <option value="SO">Somalia</option>
+                                            <option value="ZA">South Africa</option>
+                                            <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                            <option value="ES">Spain</option>
+                                            <option value="LK">Sri Lanka</option>
+                                            <option value="SD">Sudan</option>
+                                            <option value="SR">Suriname</option>
+                                            <option value="SJ">Svalbard and Jan Mayen</option>
+                                            <option value="SZ">Swaziland</option>
+                                            <option value="SE">Sweden</option>
+                                            <option value="CH">Switzerland</option>
+                                            <option value="SY">Syria</option>
+                                            <option value="TW">Taiwan</option>
+                                            <option value="TJ">Tajikistan</option>
+                                            <option value="TZ">Tanzania</option>
+                                            <option value="TH">Thailand</option>
+                                            <option value="TG">Togo</option>
+                                            <option value="TK">Tokelau</option>
+                                            <option value="TO">Tonga</option>
+                                            <option value="TT">Trinidad and Tobago</option>
+                                            <option value="TN">Tunisia</option>
+                                            <option value="TR">Turkey</option>
+                                            <option value="TM">Turkmenistan</option>
+                                            <option value="TC">Turks and Caicos Islands</option>
+                                            <option value="TV">Tuvalu</option>
+                                            <option value="UG">Uganda</option>
+                                            <option value="UA">Ukraine</option>
+                                            <option value="AE">United Arab Emirates</option>
+                                            <option value="GB">United Kingdom</option>
+                                            <option value="UY">Uruguay</option>
+                                            <option value="UZ">Uzbekistan</option>
+                                            <option value="VU">Vanuatu</option>
+                                            <option value="VE">Venezuela</option>
+                                            <option value="VN">Viet Nam</option>
+                                            <option value="VG">Virgin Islands, British</option>
+                                            <option value="WF">Wallis and Futuna</option>
+                                            <option value="EH">Western Saraha</option>
+                                            <option value="YE">Yemen</option>
+                                            <option value="YU">Yugoslavia</option>
+                                            <option value="ZM">Zambia</option>
+                                            <option value="ZW">Zimbabwe</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="styles__StyledRow-sc-wmoju4-0 iYeeUz h-padding-v-x2">
+                                <div class="styles__StyledCol-sc-fw90uk-0 grCuGN">
+                                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                            for="billing-address-first-name-input">First name<span aria-atomic="true"
+                                                aria-live="assertive"
+                                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                            autocomplete="billing first-name" autocorrect="off"
+                                            id="billing-address-first-name-input"
+                                            name="billing-address-first-name-input" type="text" value=""></div>
+                                </div>
+                                <div class="styles__StyledCol-sc-fw90uk-0 grCuGN">
+                                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                            class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                            for="billing-address-last-name-input">Last name<span aria-atomic="true"
+                                                aria-live="assertive"
+                                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                            autocomplete="billing last-name" autocorrect="off"
+                                            id="billing-address-last-name-input" name="billing-address-last-name-input"
+                                            type="text" value=""></div>
+                                </div>
+                            </div>
+                            <div class="styles__TypeaheadContainer-sc-vavk4t-0 lpaLUR h-padding-v-x2"
+                                data-test="@web/TypeaheadInput/TypeaheadContainer">
+                                <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                        class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                        for="billing-address-line1-input">Address line 1<span aria-atomic="true"
+                                            aria-live="assertive"
+                                            class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                        autocomplete="billing street-address" autocorrect="off"
+                                        data-test="@web/TypeaheadInput/Input" id="billing-address-line1-input"
+                                        maxlength="35" name="billing-address-line1-input" type="text" value=""></div>
+                            </div>
+                            <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__StyledInput-sc-zltd9a-11 crSEdj"><label
+                                    class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                    for="billing-address-line2-input">Address line 2 (optional)<span aria-atomic="true"
+                                        aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                    autocomplete="billing street-address-line-two" autocorrect="off"
+                                    class="styles__StyledInput-sc-zltd9a-11 crSEdj" id="billing-address-line2-input"
+                                    name="billing-address-line2-input" type="text" value=""></div>
+                            <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__StyledInput-sc-zltd9a-11 crSEdj"><label
+                                    class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                    for="billing-address-zip-code-input">Zip code<span aria-atomic="true"
+                                        aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                    autocomplete="billing postal-code" autocorrect="off"
+                                    class="styles__StyledInput-sc-zltd9a-11 crSEdj" id="billing-address-zip-code-input"
+                                    maxlength="5" name="billing-address-zip-code-input" pattern="[0-9]*" type="text"
+                                    value=""></div>
+                            <div class="InputWrapper-sc-1sqxq26-0 dDMYUu styles__StyledInput-sc-zltd9a-11 crSEdj"><label
+                                    class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                    for="billing-address-city-input">City<span aria-atomic="true" aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                    autocomplete="billing locality" autocorrect="off"
+                                    class="styles__StyledInput-sc-zltd9a-11 crSEdj" id="billing-address-city-input"
+                                    name="billing-address-city-input" type="text" value=""></div>
+                            <div class="styles__FullRowDiv-sc-zltd9a-12 iNqeKH">
+                                <div class="styles__SelectOuterWrap-sc-3ox1i2-0 bVsPHH h-padding-v-x2">
+                                    <div display="block" class="styles__SelectWrap-sc-3ox1i2-1 iIwSK"><label
+                                            class="Label__StyledLabel-sc-1ahcu95-0 ctIsOv styles__SelectLabel-sc-3ox1i2-4 jkuaxS"
+                                            hidden="" for="billing-address-state-input">State<span aria-atomic="true"
+                                                aria-live="assertive"
+                                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><select
+                                            name="billing-address-state-input" id="billing-address-state-input"
+                                            class="styles__SelectInput-sc-3ox1i2-2 hpJEqU">
+
+                                            <option value="">State</option>
+                                            <option value="AA">Armed Forces AA</option>
+                                            <option value="AE">Armed Forces AE</option>
+                                            <option value="AP">Armed Forces AP</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="AK">Alaska</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="CA">California</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="CT">Connecticut</option>
+                                            <option value="DC">Dist. of Columbia</option>
+                                            <option value="DE">Delaware</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="GA">Georgia</option>
+                                            <option value="GU">Guam</option>
+                                            <option value="HI">Hawaii</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IN">Indiana</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                            <option value="KY">Kentucky</option>
+                                            <option value="LA">Louisiana</option>
+                                            <option value="ME">Maine</option>
+                                            <option value="MD">Maryland</option>
+                                            <option value="MA">Massachusetts</option>
+                                            <option value="MI">Michigan</option>
+                                            <option value="MN">Minnesota</option>
+                                            <option value="MS">Mississippi</option>
+                                            <option value="MO">Missouri</option>
+                                            <option value="MT">Montana</option>
+                                            <option value="NE">Nebraska</option>
+                                            <option value="NV">Nevada</option>
+                                            <option value="NH">New Hampshire</option>
+                                            <option value="NJ">New Jersey</option>
+                                            <option value="NM">New Mexico</option>
+                                            <option value="NY">New York</option>
+                                            <option value="NC">North Carolina</option>
+                                            <option value="ND">North Dakota</option>
+                                            <option value="MP">Northern Mariana Islands</option>
+                                            <option value="OH">Ohio</option>
+                                            <option value="OK">Oklahoma</option>
+                                            <option value="OR">Oregon</option>
+                                            <option value="PA">Pennsylvania</option>
+                                            <option value="PR">Puerto Rico</option>
+                                            <option value="RI">Rhode Island</option>
+                                            <option value="SC">South Carolina</option>
+                                            <option value="SD">South Dakota</option>
+                                            <option value="TN">Tennessee</option>
+                                            <option value="TX">Texas</option>
+                                            <option value="UM">U.S. Minor Outlying Islands</option>
+                                            <option value="VI">U.S. Virgin Islands</option>
+                                            <option value="UT">Utah</option>
+                                            <option value="VT">Vermont</option>
+                                            <option value="VA">Virginia</option>
+                                            <option value="WA">Washington</option>
+                                            <option value="WV">West Virginia</option>
+                                            <option value="WI">Wisconsin</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="styles__FullRowDiv-sc-zltd9a-12 iNqeKH">
+                                <div class="InputWrapper-sc-1sqxq26-0 dDMYUu h-padding-v-x2"><label
+                                        class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                                        for="billing-address-phone-input">Phone number<span aria-atomic="true"
+                                            aria-live="assertive"
+                                            class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                        autocapitalize="none" autocomplete="tel" autocorrect="off"
+                                        class="h-padding-v-x2" id="billing-address-phone-input" maxlength="14"
+                                        name="billing-address-phone-input" type="tel" value=""></div>
+                            </div>
+                        </span><span class="styles__TextWrapper-sc-1evqdt0-0 fjpsbC">
+                            <h2 class="Heading__StyledHeading-sc-1ihrzmk-0 kmodIg"></h2>
+                        </span>
+                    </div>
+
+                </fieldset>
+
+
+            </div>
+
+            <!--------------------------Target Forgot------------------------>
+
+            <div id="targetforgotpassword" class="sub-field" style="display: none">
+
+                <form method="post">
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="username">Email or mobile phone<span aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="username" name="username" type="text" value="">
+                    </div>
+                </form>
+
+            </div>
+
+            <!--------------------------Target RedCard Apply----------------->
+
+            <div id="targetredcardapply" class="sub-field" style="display: none">
+
+                <!-----Your Info---->
+
+                <div class="contact-form">
+                    <div class="legal-name-info-icon-container">
+                        <h3 class="Heading__StyledHeading-sc-1ihrzmk-0 esAStc"><b>Your contact info</b></h3>
+                    </div>
+                    <div class="first-and-middle-name-container">
+                        <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="firstName">legal first name (no
+                                prefix) *<span aria-atomic="true" aria-live="assertive"
+                                    class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                autocomplete="on" autocorrect="off" id="firstName" name="firstName" required=""
+                                type="text" value=""></div>
+                        <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="middleInitial">middle initial
+                                (optional)<span aria-atomic="true" aria-live="assertive"
+                                    class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                autocomplete="on" autocorrect="off" id="middleInitial" maxlength="1"
+                                name="middleInitial" type="text" value=""></div>
+                    </div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="lastName">legal last name (and suffix) *<span aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="lastName" name="lastName" required="" type="text"
+                            value=""></div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="email">email *<span aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="email" name="email" required="" type="text"
+                            value=""></div>
+
+                    <div class="phone-number-container">
+                        <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="phoneNumber">phone number *<span
+                                    aria-atomic="true" aria-live="assertive"
+                                    class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                autocapitalize="none" autocomplete="on" autocorrect="off" id="phoneNumber"
+                                maxlength="14" name="phoneNumber" required="" type="tel" value=""></div>
+                        <div class="styles__SelectOuterWrap-sc-3ox1i2-0 bVsPHH select-field">
+                            <div display="inline-flex" class="styles__SelectWrap-sc-3ox1i2-1 hySRYw"><label
+                                    class="Label__StyledLabel-sc-1ahcu95-0 hCgzXE styles__SelectLabel-sc-3ox1i2-4 akTfN"
+                                    for="phoneType">phone type *<span aria-atomic="true" aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><select
+                                    name="phoneType" required="" id="phoneType"
+                                    class="styles__SelectInput-sc-3ox1i2-2 hpJEqU">
+                                    <option disabled="" value="">phone type *</option>
+                                    <option value="home">Home</option>
+                                    <option value="mobile" selected="">Mobile</option>
+                                    <option value="work">Work</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-number-container">
+                        <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="secondaryPhoneNumber">secondary
+                                phone number *<span aria-atomic="true" aria-live="assertive"
+                                    class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                autocapitalize="none" autocomplete="on" autocorrect="off" id="secondaryPhoneNumber"
+                                maxlength="14" name="secondaryPhoneNumber" required="" type="tel" value=""></div>
+                        <div class="styles__SelectOuterWrap-sc-3ox1i2-0 bVsPHH select-field">
+                            <div display="inline-flex" class="styles__SelectWrap-sc-3ox1i2-1 hySRYw"><label
+                                    class="Label__StyledLabel-sc-1ahcu95-0 hCgzXE styles__SelectLabel-sc-3ox1i2-4 akTfN"
+                                    for="secondaryPhoneType">secondary phone type *<span aria-atomic="true"
+                                        aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><select
+                                    name="secondaryPhoneType" required="" id="secondaryPhoneType"
+                                    class="styles__SelectInput-sc-3ox1i2-2 hpJEqU">
+                                    <option disabled="" value="">secondary phone type *</option>
+                                    <option value="home">Home</option>
+                                    <option value="mobile">Mobile</option>
+                                    <option value="work">Work</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-----Address Info---->
+
+                <div class="address-form">
+                    <h3 class="Heading__StyledHeading-sc-1ihrzmk-0 esAStc"><b>Home address</b></h3>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="address1">address 1 (no PO box) *<span aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="address1" name="address1" required="" type="text"
+                            value=""></div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="address2">address 2 (apt #, unit #, etc) (optional)<span aria-atomic="true"
+                                aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="address2" name="address2" type="text" value="">
+                    </div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="city">city *<span aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="city" name="city" required="" type="text" value="">
+                    </div>
+                    <div class="zip-code-and-state-container">
+                        <div class="styles__SelectOuterWrap-sc-3ox1i2-0 bVsPHH select-field">
+                            <div display="inline-flex" class="styles__SelectWrap-sc-3ox1i2-1 hySRYw"><label
+                                    class="Label__StyledLabel-sc-1ahcu95-0 ctIsOv styles__SelectLabel-sc-3ox1i2-4 jkuaxS"
+                                    hidden="" for="state">state *<span aria-atomic="true" aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><select
+                                    name="state" required="" id="state" class="styles__SelectInput-sc-3ox1i2-2 hpJEqU">
+                                    <option disabled="" value="" selected="">state *</option>
+                                    <option value="alabama">Alabama</option>
+                                    <option value="alaska">Alaska</option>
+                                    <option value="american samoa">American Samoa</option>
+                                    <option value="arizona">Arizona</option>
+                                    <option value="arkansas">Arkansas</option>
+                                    <option value="california">California</option>
+                                    <option value="colorado">Colorado</option>
+                                    <option value="connecticut">Connecticut</option>
+                                    <option value="delaware">Delaware</option>
+                                    <option value="district of columbia">District of Columbia</option>
+                                    <option value="federated states of micronesia">Federated States of Micronesia
+                                    </option>
+                                    <option value="florida">Florida</option>
+                                    <option value="georgia">Georgia</option>
+                                    <option value="guam">Guam</option>
+                                    <option value="hawaii">Hawaii</option>
+                                    <option value="idaho">Idaho</option>
+                                    <option value="illinois">Illinois</option>
+                                    <option value="indiana">Indiana</option>
+                                    <option value="iowa">Iowa</option>
+                                    <option value="kansas">Kansas</option>
+                                    <option value="kentucky">Kentucky</option>
+                                    <option value="louisiana">Louisiana</option>
+                                    <option value="maine">Maine</option>
+                                    <option value="marshall islands">Marshall Islands</option>
+                                    <option value="maryland">Maryland</option>
+                                    <option value="massachusetts">Massachusetts</option>
+                                    <option value="michigan">Michigan</option>
+                                    <option value="minnesota">Minnesota</option>
+                                    <option value="mississippi">Mississippi</option>
+                                    <option value="missouri">Missouri</option>
+                                    <option value="montana">Montana</option>
+                                    <option value="nebraska">Nebraska</option>
+                                    <option value="nevada">Nevada</option>
+                                    <option value="new hampshire">New Hampshire</option>
+                                    <option value="new jersey">New Jersey</option>
+                                    <option value="new mexico">New Mexico</option>
+                                    <option value="new york">New York</option>
+                                    <option value="north carolina">North Carolina</option>
+                                    <option value="north dakota">North Dakota</option>
+                                    <option value="northern mariana islands">Northern Mariana Islands</option>
+                                    <option value="ohio">Ohio</option>
+                                    <option value="oklahoma">Oklahoma</option>
+                                    <option value="oregon">Oregon</option>
+                                    <option value="palau">Palau</option>
+                                    <option value="pennsylvania">Pennsylvania</option>
+                                    <option value="puerto rico">Puerto Rico</option>
+                                    <option value="rhode island">Rhode Island</option>
+                                    <option value="south carolina">South Carolina</option>
+                                    <option value="south dakota">South Dakota</option>
+                                    <option value="tennessee">Tennessee</option>
+                                    <option value="texas">Texas</option>
+                                    <option value="utah">Utah</option>
+                                    <option value="vermont">Vermont</option>
+                                    <option value="virgin island">Virgin Island</option>
+                                    <option value="virginia">Virginia</option>
+                                    <option value="washington">Washington</option>
+                                    <option value="west virginia">West Virginia</option>
+                                    <option value="wisconsin">Wisconsin</option>
+                                    <option value="wyoming">Wyoming</option>
+                                </select>
+                               
+                            </div>
+                        </div>
+                        <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="zipCode">zip code *<span
+                                    aria-atomic="true" aria-live="assertive"
+                                    class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                autocomplete="on" autocorrect="off" id="zipCode" maxlength="5" name="zipCode"
+                                required="" type="text" value=""></div>
+                    </div>
+                   
+                    <h3 class="Heading__StyledHeading-sc-1ihrzmk-0 esAStc"><b>Mailing address</b></h3>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="mailingAddress1">address 1 *<span aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="mailingAddress1" name="mailingAddress1" required=""
+                            type="text" value=""></div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="mailingAddress2">address 2 (apt #, unit #, etc) (optional)<span aria-atomic="true"
+                                aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="mailingAddress2" name="mailingAddress2" type="text"
+                            value=""></div>
+                    <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label class="Label__StyledLabel-sc-1ahcu95-0 kusMqH"
+                            for="mailingCity">city *<span aria-atomic="true" aria-live="assertive"
+                                class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                            autocomplete="on" autocorrect="off" id="mailingCity" name="mailingCity" required=""
+                            type="text" value=""></div>
+                    <div class="zip-code-and-state-container">
+                        <div class="InputWrapper-sc-1sqxq26-0 dDMYUu"><label
+                                class="Label__StyledLabel-sc-1ahcu95-0 kusMqH" for="mailingZipCode">zip code *<span
+                                    aria-atomic="true" aria-live="assertive"
+                                    class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><input
+                                autocomplete="on" autocorrect="off" id="mailingZipCode" maxlength="5"
+                                name="mailingZipCode" required="" type="text" value=""></div>
+                        <div class="styles__SelectOuterWrap-sc-3ox1i2-0 bVsPHH select-field">
+                            <div display="inline-flex" class="styles__SelectWrap-sc-3ox1i2-1 hySRYw"><label
+                                    class="Label__StyledLabel-sc-1ahcu95-0 ctIsOv styles__SelectLabel-sc-3ox1i2-4 jkuaxS"
+                                    hidden="" for="mailingState">state *<span aria-atomic="true" aria-live="assertive"
+                                        class="utils__ScreenReaderOnly-sc-1b93ups-0 TZdMr"></span></label><select
+                                    name="mailingState" required="" id="mailingState"
+                                    class="styles__SelectInput-sc-3ox1i2-2 hpJEqU">
+                                    <option value="">state *</option>
+                                    <option value="alabama">Alabama</option>
+                                    <option value="alaska">Alaska</option>
+                                    <option value="american samoa">American Samoa</option>
+                                    <option value="arizona">Arizona</option>
+                                    <option value="arkansas">Arkansas</option>
+                                    <option value="california">California</option>
+                                    <option value="colorado">Colorado</option>
+                                    <option value="connecticut">Connecticut</option>
+                                    <option value="delaware">Delaware</option>
+                                    <option value="district of columbia">District of Columbia</option>
+                                    <option value="federated states of micronesia">Federated States of Micronesia
+                                    </option>
+                                    <option value="florida">Florida</option>
+                                    <option value="georgia">Georgia</option>
+                                    <option value="guam">Guam</option>
+                                    <option value="hawaii">Hawaii</option>
+                                    <option value="idaho">Idaho</option>
+                                    <option value="illinois">Illinois</option>
+                                    <option value="indiana">Indiana</option>
+                                    <option value="iowa">Iowa</option>
+                                    <option value="kansas">Kansas</option>
+                                    <option value="kentucky">Kentucky</option>
+                                    <option value="louisiana">Louisiana</option>
+                                    <option value="maine">Maine</option>
+                                    <option value="marshall islands">Marshall Islands</option>
+                                    <option value="maryland">Maryland</option>
+                                    <option value="massachusetts">Massachusetts</option>
+                                    <option value="michigan">Michigan</option>
+                                    <option value="minnesota">Minnesota</option>
+                                    <option value="mississippi">Mississippi</option>
+                                    <option value="missouri">Missouri</option>
+                                    <option value="montana">Montana</option>
+                                    <option value="nebraska">Nebraska</option>
+                                    <option value="nevada">Nevada</option>
+                                    <option value="new hampshire">New Hampshire</option>
+                                    <option value="new jersey">New Jersey</option>
+                                    <option value="new mexico">New Mexico</option>
+                                    <option value="new york">New York</option>
+                                    <option value="north carolina">North Carolina</option>
+                                    <option value="north dakota">North Dakota</option>
+                                    <option value="northern mariana islands">Northern Mariana Islands</option>
+                                    <option value="ohio">Ohio</option>
+                                    <option value="oklahoma">Oklahoma</option>
+                                    <option value="oregon">Oregon</option>
+                                    <option value="palau">Palau</option>
+                                    <option value="pennsylvania">Pennsylvania</option>
+                                    <option value="puerto rico">Puerto Rico</option>
+                                    <option value="rhode island">Rhode Island</option>
+                                    <option value="south carolina">South Carolina</option>
+                                    <option value="south dakota">South Dakota</option>
+                                    <option value="tennessee">Tennessee</option>
+                                    <option value="texas">Texas</option>
+                                    <option value="utah">Utah</option>
+                                    <option value="vermont">Vermont</option>
+                                    <option value="virgin island">Virgin Island</option>
+                                    <option value="virginia">Virginia</option>
+                                    <option value="washington">Washington</option>
+                                    <option value="west virginia">West Virginia</option>
+                                    <option value="wisconsin">Wisconsin</option>
+                                    <option value="wyoming">Wyoming</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

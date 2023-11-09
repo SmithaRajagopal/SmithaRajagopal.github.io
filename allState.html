@@ -1,0 +1,230 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>AllState</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'homepage')"
+        >
+          <h2><b>HomePage</b></h2>
+        </button>
+      </div>
+
+      <!-----------------------AllState Sign In-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <input
+          type="text"
+          name="userId"
+          placeholder="User Id"
+          class="form-field"
+          value=""
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          class="form-field"
+          value=""
+        />
+      </div>
+
+      <!------------------------AllState Checkout Information-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+        <label _ngcontent-ldr-c62="" class="label" for="PRIMARYFirstName"
+          >First name</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--lg ng-pristine ng-invalid ng-touched"
+          id="PRIMARYFirstName"
+          type="text"
+          placeholder=""
+          name="PRIMARYFirstName"
+          inputmode="text"
+          maxlength="15"
+          aria-describedby="PRIMARYFirstName_message_0 PRIMARYFirstName_message_1 PRIMARYFirstName_message_2 PRIMARYFirstName_hint_0"
+          required=""
+        /><br />
+        <label _ngcontent-ldr-c62="" class="label" for="PRIMARYMiddleName"
+          >MI</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--sm ng-untouched ng-pristine ng-valid"
+          id="PRIMARYMiddleName"
+          type="text"
+          placeholder=""
+          name="PRIMARYMiddleName"
+          inputmode="text"
+          maxlength="1"
+          aria-describedby="PRIMARYMiddleName_message_0 PRIMARYMiddleName_message_1 PRIMARYMiddleName_hint_0"
+        /><br />
+        <label _ngcontent-ldr-c62="" class="label" for="CURRENTAddressLine1"
+          >Street address</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--lg ng-untouched ng-pristine ng-invalid"
+          id="CURRENTAddressLine1"
+          type="text"
+          placeholder=""
+          name="CURRENTAddressLine1"
+          inputmode="text"
+          minlength="2"
+          maxlength="25"
+          aria-describedby="CURRENTAddressLine1_message_0 CURRENTAddressLine1_message_1 CURRENTAddressLine1_message_2 CURRENTAddressLine1_message_3 CURRENTAddressLine1_message_4 CURRENTAddressLine1_hint_0"
+          required=""
+        /><br />
+        <label _ngcontent-ldr-c62="" class="label" for="CURRENTApt"
+          >Apt/unit</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--lg ng-untouched ng-pristine ng-invalid"
+          id="CURRENTCity"
+          type="text"
+          placeholder=""
+          name="CURRENTCity"
+          inputmode="text"
+          maxlength="20"
+          aria-describedby="CURRENTCity_message_0 CURRENTCity_message_1 CURRENTCity_message_2 CURRENTCity_hint_0"
+          required=""
+        /><br />
+        <legend _ngcontent-ldr-c61="" class="txt txt--bold txt--16">
+          What's the address you'd like to insure?
+        </legend>
+        <label _ngcontent-ldr-c62="" class="label" for="INSUREDAddressLine1"
+          >Street address</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--lg ng-untouched ng-pristine ng-invalid"
+          id="INSUREDAddressLine1"
+          type="text"
+          placeholder=""
+          name="INSUREDAddressLine1"
+          inputmode="text"
+          minlength="2"
+          maxlength="25"
+          aria-describedby="INSUREDAddressLine1_message_0 INSUREDAddressLine1_message_1 INSUREDAddressLine1_message_2 INSUREDAddressLine1_message_3 INSUREDAddressLine1_message_4 INSUREDAddressLine1_hint_0"
+          required=""
+        /><br />
+        <label _ngcontent-ldr-c62="" class="label" for="INSUREDApt"
+          >Apt/unit</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--md ng-pristine ng-valid ng-touched"
+          id="INSUREDApt"
+          type="text"
+          placeholder=""
+          name="INSUREDApt"
+          inputmode="text"
+          maxlength="7"
+          aria-describedby="INSUREDApt_message_0 INSUREDApt_message_1 INSUREDApt_hint_0"
+        /><br />
+        <label _ngcontent-ldr-c62="" class="label" for="INSUREDCity"
+          >City</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--lg ng-untouched ng-pristine ng-invalid"
+          id="INSUREDCity"
+          type="text"
+          placeholder=""
+          name="INSUREDCity"
+          inputmode="text"
+          maxlength="20"
+          aria-describedby="INSUREDCity_message_0 INSUREDCity_message_1 INSUREDCity_message_2 INSUREDCity_hint_0"
+          required=""
+        /><br />
+        <label
+          _ngcontent-ldr-c62=""
+          class="label label--has-value"
+          for="INSUREDZipcode"
+          >ZIP</label
+        >
+        <input
+          _ngcontent-ldr-c62=""
+          autocomplete="off"
+          class="input width-control--md ng-dirty ng-invalid ng-touched"
+          id="INSUREDZipcode"
+          type="text"
+          placeholder=""
+          name="INSUREDZipcode"
+          inputmode="numeric"
+          minlength="5"
+          maxlength="5"
+          aria-describedby="INSUREDZipcode_message_0 INSUREDZipcode_message_1 INSUREDZipcode_message_2 INSUREDZipcode_message_3 INSUREDZipcode_message_4 INSUREDZipcode_hint_0"
+          required=""
+        /><br />
+      </div>
+
+      <!------------------------AllState HomePage Information-------------------->
+
+      <div id="homepage" class="sub-field" style="display: none">
+        <input
+          maxlength="5"
+          class="form-field"
+          placeholder="Enter zip"
+          value=""
+        /><br />
+        <input
+          type="text"
+          maxlength="5"
+          class="form-field"
+          placeholder="Enter zip"
+          aria-label="enter zip code"
+          data-loc="footer"
+          value=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

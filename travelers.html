@@ -1,0 +1,238 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>Travelers</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'homepage')"
+        >
+          <h2><b>HomePage</b></h2>
+        </button>
+      </div>
+
+      <!-------------------Travelers SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none">
+        <div class="tds-field align-left undefined">
+          <label for="firstName" class="tds-field__label camelCase"
+            >first name</label
+          >
+          <div class="">
+            <input
+              type="text"
+              id="firstName"
+              label="firstName"
+              name="firstName"
+              autocomplete="off"
+              class="undefined tds-field__input"
+              maxlength="60"
+              aria-required="true"
+              aria-describedby=""
+              aria-invalid="false"
+              value=""
+            />
+            <div class=""></div>
+          </div>
+        </div>
+        <div class="tds-field align-left undefined">
+          <label for="lastName" class="tds-field__label camelCase"
+            >last name</label
+          >
+          <div class="">
+            <input
+              type="text"
+              id="lastName"
+              label="lastName"
+              name="lastName"
+              autocomplete="off"
+              class="undefined tds-field__input"
+              maxlength="60"
+              aria-required="true"
+              aria-describedby=""
+              aria-invalid="false"
+              value=""
+            />
+            <div class=""></div>
+          </div>
+        </div>
+        <div class="tds-field align-left low-bottom-margin">
+          <label for="email" class="tds-field__label camelCase">email</label>
+          <div class="">
+            <input
+              type="text"
+              id="email"
+              label="email"
+              name="email"
+              autocomplete="off"
+              class="undefined tds-field__input"
+              maxlength="60"
+              aria-required="true"
+              aria-describedby="userIdDesc"
+              aria-invalid="false"
+              value=""
+            />
+            <div class=""></div>
+          </div>
+        </div>
+      </div>
+
+      <!-----------------------Travelers SignIn-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <label for="okta-signin-username" class="wgt-field__label"
+          >USER ID</label
+        >
+        <input
+          type="text"
+          placeholder=""
+          name="username"
+          id="okta-signin-username"
+          value=""
+          aria-label=""
+          autocomplete="off"
+          required=""
+          class="tds-field__input wgt-field__input"
+        /><br />
+        <label for="okta-signin-password" class="wgt-field__label"
+          >Password</label
+        >
+        <input
+          type="password"
+          placeholder=""
+          name="password"
+          id="okta-signin-password"
+          value=""
+          aria-label=""
+          autocomplete="off"
+          class="tds-field__input wgt-field__input tlPrivate"
+          required=""
+        />
+      </div>
+
+      <!------------------------Travelers Forgot Password-------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        <div class="form-group">
+          <label for="userId">User ID:</label>
+
+          <input
+            noemailvalidation=""
+            name="userId"
+            id="userId"
+            type="text"
+            class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched"
+            ng-model="userId"
+            ng-class="{errorInput: userIdHasError}"
+            autocomplete="off"
+            iefocus=""
+            required=""
+          />
+        </div>
+        <div class="form-group ng-scope" ng-repeat="email in emailArray">
+          <label for="email0">Email:</label>
+          <input
+            noemailvalidation=""
+            name="email0"
+            id="email0"
+            type="text"
+            class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched"
+            ng-model="email.email"
+            ng-class="{errorInput:email.showError}"
+            autocomplete="off"
+            iefocus=""
+            required=""
+          />
+        </div>
+        <div class="form-group ng-scope" ng-repeat="email in emailArray">
+          <label for="email1">Email:</label>
+          <input
+            noemailvalidation=""
+            name="email1"
+            id="email1"
+            type="text"
+            class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+            ng-model="email.email"
+            ng-class="{errorInput:email.showError}"
+            autocomplete="off"
+            iefocus=""
+            required=""
+          />
+        </div>
+        <div class="form-group ng-scope" ng-repeat="email in emailArray">
+          <label for="email2">Email:</label>
+          <input
+            noemailvalidation=""
+            name="email2"
+            id="email2"
+            type="text"
+            class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+            ng-model="email.email"
+            ng-class="{errorInput:email.showError}"
+            autocomplete="off"
+            iefocus=""
+            required=""
+          />
+        </div>
+      </div>
+
+      <!------------------------Travelers HomePage Information-------------------->
+
+      <div id="homepage" class="sub-field" style="display: none">
+        <label for="quote-zip-code" class="sr">Zip Code</label>
+        <input
+          id="quote-zip-code"
+          class="zip"
+          name="zipCode"
+          maxlength="5"
+          placeholder="ZIP Code"
+          type="tel"
+          pattern="[0-9]*"
+          inputmode="numeric"
+          data-type="zipCode"
+        />
+      </div>
+    </div>
+  </body>
+</html>

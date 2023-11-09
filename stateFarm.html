@@ -1,0 +1,433 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>StateFarm</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'home')"
+        >
+          <h2><b>HomePage</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'bill')"
+        >
+          <h2><b>Bill Information</b></h2>
+        </button>
+      </div>
+
+      <!-------------------StateFarm SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none">
+        <fieldset class="-oneX-fieldset">
+          <label for="inputphoneNumber" class="-oneX-textfield__floatingLabel"
+            >Phone number</label
+          >
+          <input
+            id="inputphoneNumber"
+            name="inputphoneNumber"
+            class="-oneX-textfield--floating-input"
+            type="tel"
+            data-formatter="phone"
+            autocomplete="on"
+            value=""
+            data-placeholder="___-___-____"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
+        </fieldset>
+        <fieldset class="-oneX-fieldset">
+          <label for="inputemailAddress" class="-oneX-textfield__floatingLabel"
+            >Email address</label
+          ><input
+            id="inputemailAddress"
+            name="inputemailAddress"
+            class="-oneX-textfield--floating-input"
+            type="email"
+            autocomplete="on"
+            title=""
+            value=""
+          />
+        </fieldset>
+      </div>
+
+      <!-----------------------StateFarm Sign In-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <div class="">
+          <label for="username" class="-oneX-textfield__floatingLabel"
+            >User ID</label
+          ><input
+            id="username"
+            name="IDToken1"
+            type="text"
+            class="-oneX-textfield--floating-input"
+            aria-invalid="true"
+            aria-describedby="usernameError"
+            value=""
+          />
+        </div>
+        <fieldset class="-oneX-fieldset">
+          <label for="password" class="-oneX-textfield__floatingLabel"
+            >Password</label
+          ><input
+            id="password"
+            name="IDToken2"
+            type="password"
+            class="-oneX-textfield--floating-input -oneX-textfield--control"
+            value=""
+          />
+        </fieldset>
+      </div>
+
+      <!------------------------StateFarm Forgot Password-------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        <label for="forgotPhoneInput" class="-oneX-textfield__floatingLabel"
+          >Phone</label
+        >
+        <input
+          id="forgotPhoneInput"
+          type="tel"
+          class="-oneX-textfield--floating-input"
+          data-formatter="phone"
+          data-placeholder="___-___-____"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          autocomplete="tel"
+          aria-invalid="true"
+        /><br />
+        <label for="forgotEmailInput" class="-oneX-textfield__floatingLabel"
+          >Email</label
+        >
+        <input
+          id="forgotEmailInput"
+          type="text"
+          class="-oneX-textfield--floating-input"
+        />
+      </div>
+
+      <!------------------------StateFarm Checkout Information-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+        <div class="-oneX-col-12 -oneX-col-md-8 -oneX-col-lg-6 -oneX-col-xl-5">
+          <label for="firstName" class="-oneX-textfield__floatingLabel"
+            >First Name</label
+          >
+          <input
+            id="firstName"
+            type="text"
+            class="-oneX-textfield--floating-input"
+            name="firstName"
+            aria-required="true"
+            data-validator="required"
+            aria-describedby="firstName-error-alert"
+            maxlength="40"
+          />
+        </div>
+        <div class="-oneX-col-12 -oneX-col-md-8 -oneX-col-lg-6 -oneX-col-xl-5">
+          <label for="lastName" class="-oneX-textfield__floatingLabel"
+            >Last Name</label
+          >
+          <input
+            id="lastName"
+            type="text"
+            class="-oneX-textfield--floating-input"
+            name="lastName"
+            aria-required="true"
+            data-validator="required"
+            aria-describedby="lastName-error-alert"
+            maxlength="80"
+          />
+        </div>
+        <div
+          class="-oneX-exploded_Address1"
+          data-error-id="street1-error-message"
+        >
+          <label
+            for="leadgen-address_line1-id"
+            class="-oneX-textfield__floatingLabel"
+            >Primary Address</label
+          >
+          <input
+            id="leadgen-address_line1-id"
+            name="address_line1"
+            type="text"
+            class="-oneX-textfield--floating-input"
+            aria-describedby="oneX-SRInstructionsleadgen-full-address-id"
+            aria-haspopup="true"
+            placeholder=" "
+            value=""
+            autocomplete="section-address_line1 address-line1"
+          />
+        </div>
+        <div
+          class="-oneX-exploded_City"
+          style="width: 100%"
+          data-error-id="city-error-message"
+        >
+          <label for="leadgen-city-id" class="-oneX-textfield__floatingLabel"
+            >City</label
+          >
+          <input
+            id="leadgen-city-id"
+            name="city"
+            type="text"
+            class="-oneX-textfield--floating-input"
+            data-1x-separate="true"
+            placeholder=" "
+            value=""
+            autocomplete="section-address_line1 address-level2"
+          />
+        </div>
+        <div class="-oneX-exploded_State" data-error-id="state-error-message">
+          <label for="leadgen-state-id" class="-oneX-dropdown__floatingLabel"
+            >State</label
+          >
+          <select
+            id="leadgen-state-id"
+            name="state"
+            type="text"
+            class="-oneX-dropdown"
+            data-1x-separate="true"
+            data-1x-space="true"
+            autocomplete="section-address_line1 address-level1"
+          >
+            <option value=""></option>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+          </select>
+        </div>
+        <div class="-oneX-exploded_Zip" data-error-id="zip-error-message">
+          <label for="leadGen-zipCode" class="-oneX-textfield__floatingLabel"
+            >ZIP Code
+          </label>
+          <input
+            id="leadGen-zipCode"
+            name="zip"
+            type="tel"
+            data-formatter="zip"
+            class="-oneX-textfield--floating-input"
+            value=""
+            autocomplete="section-address_line1 postal-code"
+            data-placeholder="_____"
+            pattern="[0-9]{5}"
+          />
+        </div>
+        <div
+          id="phoneNumberContainer"
+          class="-oneX-col-12 -oneX-col-md-8 -oneX-col-lg-6 -oneX-col-xl-5"
+        >
+          <label for="phoneNumber" class="-oneX-textfield__floatingLabel"
+            >Phone</label
+          >
+          <input
+            id="phoneNumber"
+            type="tel"
+            class="-oneX-textfield--floating-input"
+            name="phoneNumber"
+            aria-required="true"
+            data-validator="phone"
+            data-formatter="phone"
+            aria-describedby="phoneNumber-error-alert"
+            data-placeholder="___-___-____"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            autocomplete="tel"
+          />
+        </div>
+        <div
+          id="emailAddressContainer"
+          class="-oneX-col-12 -oneX-col-md-8 -oneX-col-lg-6 -oneX-col-xl-5"
+        >
+          <label for="emailAddress" class="-oneX-textfield__floatingLabel"
+            >Email</label
+          >
+          <input
+            id="emailAddress"
+            type="text"
+            class="-oneX-textfield--floating-input"
+            name="emailAddress"
+            aria-required="true"
+            data-validator="email"
+            aria-describedby="emailAddress-error-alert"
+            maxlength="80"
+          />
+        </div>
+      </div>
+
+      <!------------------------StateFarm HomePage Information-------------------->
+
+      <div id="home" class="sub-field" style="display: none">
+        <label
+          for="quote-main-zip-code-input"
+          class="-oneX-textfield__floatingLabel"
+          data-optly-9838372d-bd3b-4649-a60c-fac6ccf29162=""
+          >ZIP Code</label
+        >
+        <input
+          id="quote-main-zip-code-input"
+          name="zipCode"
+          class="-oneX-textfield__input"
+          type="tel"
+          aria-required="true"
+          data-validator="zip"
+          data-formatter="zip"
+          aria-describedby="quote-error-alert"
+          data-optly-9838372d-bd3b-4649-a60c-fac6ccf29162=""
+          data-placeholder="_____"
+          pattern="[0-9]{5}"
+          autocomplete="postal-code"
+        />
+      </div>
+      <!------------------------StateFarm Bill Information-------------------->
+
+      <div id="bill" class="sub-field" style="display: none">
+        <div
+          id="phoneNumberDiv"
+          data-optly-83def0d5-f406-4e34-b5d3-b7ad2b412e45=""
+          class="-oneX-widget--err"
+        >
+          <label
+            for="phoneNumber"
+            class="-oneX-textfield__floatingLabel"
+            data-optly-83def0d5-f406-4e34-b5d3-b7ad2b412e45=""
+            >Phone number</label
+          >
+          <input
+            id="phoneNumber"
+            name="phoneNumber"
+            type="tel"
+            class="-oneX-textfield__input"
+            value=""
+            aria-required="true"
+            autocomplete="off"
+            data-formatter="phone"
+            maxlength="14"
+            data-placeholder="___-___-____"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            data-optly-83def0d5-f406-4e34-b5d3-b7ad2b412e45=""
+            aria-describedby="phoneNumberAlert"
+            aria-invalid="true"
+          />
+        </div>
+        <fieldset
+          class="-oneX-fieldset"
+          data-optly-83def0d5-f406-4e34-b5d3-b7ad2b412e45=""
+        >
+          <label
+            for="policyNumberZipCode"
+            class="-oneX-textfield__floatingLabel"
+            data-optly-83def0d5-f406-4e34-b5d3-b7ad2b412e45=""
+            >Zip Code or postal code</label
+          >
+          <input
+            id="policyNumberZipCode"
+            name="billingZipCode"
+            type="tel"
+            class="-oneX-textfield__input -oneX-textfield--control text-input"
+            value=""
+            autocomplete="off"
+            maxlength="7"
+            aria-required="true"
+            data-optly-83def0d5-f406-4e34-b5d3-b7ad2b412e45=""
+          />
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>

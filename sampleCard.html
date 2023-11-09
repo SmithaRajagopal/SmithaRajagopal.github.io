@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body>
+    <br /><br />
+    <h1>
+      <center>
+        <p class="center"><b>Sample Card Details</b></p>
+      </center>
+    </h1>
+    <br />
+
+    <label for="FirstName">First Name</label>
+    <input
+      type="text"
+      name="customer[first_name]"
+      id="FirstName"
+      class="input-full"
+      autocapitalize="words"
+      autofocus=""
+    /><br />
+
+    <label for="LastName">Last Name</label>
+    <input
+      type="text"
+      name="customer[last_name]"
+      id="LastName"
+      class="input-full"
+      autocapitalize="words"
+    /><br />
+    <label for="LastName">Card Number</label>
+    <input
+      type="text"
+      name="cardnumber"
+      id="cardnumber"
+      class="input-full"
+      autocapitalize="words"
+      autofocus=""
+    /><br />
+    <label for="LastName">Expiration Date</label>
+    <input
+      type="text"
+      name="expiry"
+      id="expiry"
+      class="input-full"
+      autocapitalize="words"
+      autofocus=""
+    /><br />
+    <label for="LastName">CVV</label>
+    <input
+      type="text"
+      name="verification_value"
+      id="verification_value"
+      class="input-full"
+      autocapitalize="words"
+      autofocus=""
+    /><br />
+
+    <button type="submit">Submit</button>
+  </body>
+</html>

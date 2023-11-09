@@ -1,0 +1,244 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <br><br>
+    <h1>
+        <center>
+            <p class="center"><b>Mylapore Express</b></p>
+        </center>
+    </h1><br>
+    <h5><b>**SignIn and SignUp Needs OTP**</b></h5><br>
+    <div id="mylaporeexpress" class="field">
+        <div id="tab">
+            <div id="field">
+                <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'mylaporeexpresssignup')">
+                    <h2><b>Sign Up</h2></b>
+                </button>
+
+                <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'mylaporeexpresssignin')">
+                    <h2><b>Sign In</h2></b>
+                </button>
+
+               
+
+                <button class="subtab tablinks titlecontent"
+                    onclick="openSubComponent(event, 'mylaporeexpressguestcheckout')">
+                    <h2><b>Guess Checkout</h2></b>
+                </button>
+
+                <button class="subtab tablinks titlecontent"
+                    onclick="openSubComponent(event, 'mylaporeexpresszipcode')">
+                    <h2><b>Guest Zipcode</h2></b>
+                </button>
+
+                <button class="subtab tablinks titlecontent"
+                    onclick="openSubComponent(event, 'mylaporeexpresspayment')">
+                    <h2><b>Payment</h2></b>
+                </button>
+
+                
+
+            </div>
+
+
+            <!----------------------------------Mylapore Express Guest Checkout-------------------------->
+
+            <div id="mylaporeexpressguestcheckout" class="sub-field" style="display: none">
+
+                <div class="col-xl-8">
+
+                    <h5 class="sub-head mt-4 mb-3"><b>Personal Details</b></h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">First Name</label><input type="text"
+                                    class="form-control" placeholder="Enter first name" value=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">Last Name</label><input type="text"
+                                    class="form-control" placeholder="Enter last name" value=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">Email</label><input type="text" class="form-control"
+                                    placeholder="Email address" value=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><!--<label for="">Mobile Number</label> -->
+                                <div class=" react-tel-input ">
+                                    <div class="special-label">Phone<input class="form-control "
+                                        placeholder="(xxx) xxx-xxxx" type="tel" value="+1">
+                                    <div class="flag-dropdown "></div>
+                                        <div class="selected-flag" title="United States: + 1" tabindex="0" role="button"
+                                            aria-haspopup="listbox">
+                                            <div class="flag us">
+                                                <div class="arrow"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="sub-head mt-4 mb-3"><b>Delivery Address</b></h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">First Name</label><input type="text"
+                                    class="form-control" placeholder="Enter first name" value=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">Last Name</label><input type="text"
+                                    class="form-control" placeholder="Enter last name" value=""></div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group"><label for="">Address</label><input type="text" class="form-control"
+                                    placeholder="Ex: d.no, flat no, street name, near by" value=""></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="">Apt / Suite #</label><input type="text"
+                                    class="form-control" placeholder="Apt / Suite #" value=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">Zipcode</label><input disabled="" type="text"
+                                    class="form-control" placeholder="zipcode" inputmode="numeric" value="94025"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">City</label><input disabled="" type="text"
+                                    class="form-control" placeholder="City name" value="Menlo Park"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">State</label><input disabled="" type="text"
+                                    class="form-control" placeholder="State name" value="CA"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="">Country</label><input disabled="" type="text"
+                                    class="form-control" placeholder="Name of country" value="USA"></div>
+                        </div>
+
+                    </div>
+
+                    <h5 class="sub-head mt-4 mb-3"><b>Billing Address</b></h5>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group"><label for="">Address</label><input type="text"
+                                        class="form-control" placeholder="Ex: d.no, flat no, street name, near by"
+                                        value=""></div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group"><label for="">Apt / Suite #</label><input type="text"
+                                        class="form-control" placeholder="Apt / Suite #" value=""></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group"><label for="">Zipcode</label><input type="text"
+                                        class="form-control" placeholder="zipcode" inputmode="numeric" value=""></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group"><label for="">City</label><input type="text"
+                                        class="form-control" placeholder="City name" value=""></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group"><label for="">State</label><input type="text"
+                                        class="form-control" placeholder="State name" value=""></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group"><label for="">Country</label><input type="text"
+                                        class="form-control" placeholder="Name of country" value=""></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <!----------------------------------Mylapore Express ZipCode--------------------------------->
+
+            <div id="mylaporeexpresszipcode" class="sub-field" style="display: none">
+
+
+                <h6 class="modal-title mb-1 mt-6"><b>Delivery Zip Code</b><br></h6>
+                <input id="Delivery-Zipcode" maxlength="5" type="text" class="form-control col-5" placeholder="zip code"
+                    inputmode="numeric" value="">
+
+            </div>
+
+            <!--------------------------------Mylapore Express Payment---------------------------------->
+
+            <div id="mylaporeexpresspayment" class="sub-field" style="display: none">
+
+                <input required="" autocomplete="cc-number" id="number" name="number" type="text"
+                    placeholder="Card number"><br>
+                <input required="" autocomplete="cc-name" id="name" name="name" type="text"
+                    placeholder="Cardholder name"><br>
+                <input required="" autocomplete="cc-exp" id="expiry" name="expiry" type="text"
+                    placeholder="Expiration date (MM / YY)"><br>
+                <input autocomplete="cc-csc" id="verification_value" name="verification_value" type="text"
+                    placeholder="Security code"><br><br>
+
+
+            </div>
+
+            <!------------------------------Mylapore Express Sign Up----------------------------------->
+
+            <div id="mylaporeexpresssignup" class="sub-field" style="display: none">
+
+                <div class="col-md-6">
+                    <div class="form-group"><input type="text" class="form-control" id="staticEmail"
+                            placeholder="First name" value=""></div>
+                    <div class="form-group"><input type="text" class="form-control" id="staticEmail"
+                            placeholder="Last name" value=""></div>
+                    <div class="form-group">
+                        <div class="input-group"><input type="text" name="Email" id="Email" class="form-control"
+                                placeholder="Email Address" value=""></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group"><input type="text" class="form-control" name="confirm_Email"
+                                id="confirm_Email" placeholder="Confirm Email Address" value=""></div>
+                    </div>
+                    <div class="form-group signup-form">
+                        <div class="input-group">
+                            <div class="input-group-prepend" style="width: 100%;">
+                                <div class=" react-tel-input ">
+                                    <div class="special-label">Phone<input class="form-control "
+                                            placeholder="Mobile number" type="tel" value="+1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!---------------------------Mylapore Express Sign IN------------------------------->
+
+            <div id="mylaporeexpresssignin" class="sub-field" style="display: none">
+
+                <div class=" react-tel-input ">
+                    <div class="special-label">Phone
+                    <input class="form-control " placeholder="Enter phone number"
+                        type="tel" value="+1">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

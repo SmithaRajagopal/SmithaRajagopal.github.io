@@ -1,0 +1,539 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOMD Testing Site</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+
+  <body
+    class="mm-active mm-gpr-navigation-active mm-gpr-navigation gtm-applied mm-itinerary-active mm-ancillaries-page-active gtm-rb-listeners"
+    style="background-color: rgb(237, 237, 237)"
+  >
+    <br /><br />
+    <h1>
+      <p class="center"><b>UnitedHealth</b></p>
+    </h1>
+    <br />
+
+    <div id="tab">
+      <div id="field" id="credit">
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signup')"
+        >
+          <h2><b>Sign Up</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'signin')"
+        >
+          <h2><b>Sign In</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'forgotpassword')"
+        >
+          <h2><b>Forgot Password</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'homepage')"
+        >
+          <h2><b>HomePage</b></h2>
+        </button>
+        <button
+          class="subtab tablinks titlecontent"
+          onclick="openSubComponent(event, 'checkout')"
+        >
+          <h2><b>Checkout</b></h2>
+        </button>
+      </div>
+
+      <!-------------------UnitedHealth SignUp---------------------------->
+
+      <div id="signup" class="sub-field" style="display: none">
+        <label for="firstName" class="is-block"><span>First Name</span></label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          class="Tier1Component_inputDefault__Kvl6E"
+          aria-invalid="false"
+          aria-describedby="firstName_err"
+          placeholder=""
+          autocomplete="given-name"
+          aria-required="true"
+          value=""
+        /><br />
+        <label for="lastName" class="is-block"><span>Last Name</span></label>
+        <input
+          id="lastName"
+          name="lastName"
+          type="text"
+          class="Tier1Component_inputDefault__Kvl6E"
+          aria-invalid="false"
+          aria-describedby="lastName_err"
+          placeholder=""
+          autocomplete="family-name"
+          aria-required="true"
+          value=""
+        /><br />
+        <label for="zipCode" class="is-block"><span>ZIP Code</span></label>
+        <input
+          id="zipCode"
+          name="zipCode"
+          placeholder="12345"
+          type="text"
+          aria-invalid="false"
+          aria-describedby="zipCode_err"
+          class="Tier2Component_Tier2Input__+P+LL undefined"
+          autocomplete="postal-code"
+          inputmode="numeric"
+          aria-required="true"
+          value=""
+        />
+      </div>
+
+      <!-----------------------UnitedHealth SignIn-------------------------->
+
+      <div id="signin" class="sub-field" style="display: none">
+        <label for="username" class="is-block"><span>Username</span></label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          class="Tier1Component_inputDefault__Kvl6E"
+          aria-invalid="false"
+          aria-describedby="username_err"
+          placeholder=""
+          autocomplete="off"
+          autocapitalize="off"
+          value=""
+        /><br />
+        <label for="password" class="is-block"><span>Password</span></label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          class="Tier1Component_inputDefault__Kvl6E"
+          aria-invalid="false"
+          aria-describedby="password_err"
+          placeholder=""
+          autocomplete="off"
+          value=""
+        />
+      </div>
+
+      <!------------------------UnitedHealth Forgot Password-------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        <label for="firstName" class="is-block"><span>First Name</span></label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          class="Tier1Component_inputDefault__Kvl6E"
+          aria-invalid="false"
+          aria-describedby="firstName_err"
+          aria-required="true"
+          placeholder=""
+          autocomplete="given-name"
+          value=""
+        /><br />
+        <label for="lastName" class="is-block"><span>Last Name</span></label>
+        <input
+          id="lastName"
+          name="lastName"
+          type="text"
+          class="Tier1Component_inputDefault__Kvl6E"
+          aria-invalid="false"
+          aria-describedby="lastName_err"
+          aria-required="true"
+          placeholder=""
+          autocomplete="family-name"
+          value=""
+        /><br />
+        <label for="email" class="is-block"><span>Email Address</span></label>
+        <input
+          type="text"
+          class="Tier2Component_Tier2Input__+P+LL undefined"
+          id="email"
+          name="email"
+          aria-invalid="false"
+          aria-describedby="email_err"
+          aria-required="true"
+          placeholder="name@domain.com"
+          autocomplete="email"
+          autocapitalize="off"
+          inputmode="email"
+          value=""
+        /><br />
+        <label for="username" class="is-block"><span>Username</span></label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          class="Tier1Component_inputDefault__Kvl6E"
+          aria-invalid="false"
+          aria-describedby="username_err"
+          placeholder=""
+          autocomplete="username"
+          aria-required="true"
+          autocapitalize="off"
+          value=""
+        />
+      </div>
+
+      <!------------------------UnitedHealth HomePage Information-------------------->
+
+      <div id="homepage" class="sub-field" style="display: none">
+        <label for="zipSearch-1907232265" class="u-color-blue u-m-b-xs"
+          >Search for plans by ZIP (5 digits)</label
+        ><br />
+        <input
+          id="zipSearch-1907232265"
+          name="zipSearch-1907232265"
+          class="c-input c-input-group__input c-zip-search__input"
+          type="text"
+          inputmode="numeric"
+          maxlength="5"
+          required=""
+          aria-invalid="false"
+          autocomplete="postal-code"
+          aria-describedby="zipSearch-1907232265__error zipSearch-1907232265__description"
+        />
+      </div>
+      <!------------------------UnitedHealth Checkout Information-------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+        <div data-input="">
+          <label for="js-ole-modal__input" class="u-m-t-xs">ZIP Code</label>
+          <input
+            id="js-ole-modal__input"
+            aria-invalid="false"
+            aria-describedby="zipcode-search"
+            class="c-input c-ole-zip-search__input u-w-m480"
+            type="text"
+            name="zip"
+            value=""
+            inputmode="numeric"
+            maxlength="5"
+            placeholder="12345"
+            data-rule="zipcode"
+            required=""
+          /><br />
+        </div>
+        <label
+          label-index="label-24"
+          id="firstNameLabel"
+          for="firstName"
+          aria-describedby="firstName"
+          class="ole-ifta-label"
+          >First name
+        </label>
+        <input
+          input-index="input-3"
+          type="text"
+          id="firstName"
+          autocomplete="given-name"
+          aria-describedby="firstName2"
+          class="field-type-open ng-pristine ng-invalid ng-touched"
+          required=""
+          minlength=""
+          maxlength=""
+        /><br />
+        <label
+          label-index="label-24"
+          id="middleNameLabel"
+          for="middleName"
+          aria-describedby="middleName"
+          class="ole-ifta-label"
+          >Middle name/Initial
+        </label>
+        <input
+          input-index="input-3"
+          type="text"
+          id="middleName"
+          autocomplete="on"
+          aria-describedby="middleName2"
+          class="field-type-open ng-untouched ng-pristine ng-valid"
+          minlength=""
+          maxlength=""
+        /><br />
+        <label
+          label-index="label-24"
+          id="lastNameLabel"
+          for="lastName"
+          aria-describedby="lastName"
+          class="ole-ifta-label"
+          >Last name
+        </label>
+        <input
+          input-index="input-3"
+          type="text"
+          id="lastName"
+          autocomplete="family-name"
+          aria-describedby="lastName2"
+          class="field-type-open ng-untouched ng-pristine ng-invalid"
+          required=""
+          minlength=""
+          maxlength=""
+        /><br />
+        <label
+          label-index="label-24"
+          id="address1Label"
+          for="address1"
+          aria-describedby="address1"
+          class="ole-ifta-label"
+          >Street address
+        </label>
+        <input
+          type="text"
+          placeholder=""
+          required=""
+          class="mat-autocomplete-trigger ng-untouched ng-pristine ng-invalid"
+          id="address1"
+          minlength=""
+          maxlength="55"
+          autocomplete="off"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-haspopup="true"
+        /><br />
+        <label
+          label-index="label-24"
+          id="address2Label"
+          for="address2"
+          aria-describedby="address2"
+          class="ole-ifta-label"
+          >Apartment/Suite #
+        </label>
+        <input
+          input-index="input-3"
+          type="text"
+          id="address2"
+          autocomplete="on"
+          aria-describedby="address22"
+          class="field-type-open ng-untouched ng-pristine ng-valid"
+          minlength=""
+          maxlength="55"
+        /><br />
+        <label
+          label-index="label-24"
+          id="cityLabel"
+          for="city"
+          aria-describedby="city"
+          class="ole-ifta-label"
+          >City
+        </label>
+        <input
+          input-index="input-3"
+          type="text"
+          id="city"
+          autocomplete="on"
+          aria-describedby="city2"
+          class="field-type-open ng-untouched ng-pristine ng-invalid"
+          required=""
+          minlength=""
+          maxlength="30"
+        /><br />
+        <h4 class="subquestionlegend">
+          <b> What is your mailing address? </b>
+        </h4>
+        <br />
+        <label label-index="label-17" class="ole-ifta-label" for="address10"
+          >Street address
+        </label>
+        <input
+          type="text"
+          placeholder=""
+          required=""
+          class="mat-autocomplete-trigger ng-untouched ng-pristine ng-invalid"
+          id="address10"
+          minlength=""
+          maxlength="55"
+          autocomplete="off"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-haspopup="true"
+        /><br />
+        <label label-index="label-17" class="ole-ifta-label nr" for="address20"
+          >Apartment/Suite # </label
+        ><input
+          maxlength="55"
+          type="text"
+          input-index="input-13"
+          id="address20"
+          autocomplete="on"
+          aria-describedby="address23"
+          class="field-type-open ng-untouched ng-pristine ng-valid"
+          minlength=""
+        /><br />
+        <label label-index="label-17" class="ole-ifta-label" for="city0"
+          >City
+        </label>
+        <input
+          maxlength="30"
+          type="text"
+          input-index="input-13"
+          id="city0"
+          autocomplete="on"
+          aria-describedby="city3"
+          class="field-type-open ng-untouched ng-pristine ng-invalid"
+          required=""
+          minlength=""
+        /><br />
+        <label
+          label-index="label-17"
+          class="ole-ifta-label ifta-drop-down-label"
+          for="state0"
+          >State
+        </label>
+        <select
+          id="state0"
+          select-index="select-4"
+          class="selectboxit selectboxit-btn ole-ifta-dropdown ng-untouched ng-pristine ng-invalid"
+          name="state"
+        >
+          <option value="">Select state</option>
+          <option value="AL">ALABAMA</option>
+          <option value="AK">ALASKA</option>
+          <option value="AS">AMERICAN SAMOA</option>
+          <option value="AZ">ARIZONA</option>
+          <option value="AR">ARKANSAS</option>
+          <option value="CA">CALIFORNIA</option>
+          <option value="CO">COLORADO</option>
+          <option value="CT">CONNECTICUT</option>
+          <option value="DE">DELAWARE</option>
+          <option value="DC">DIST OF COL</option>
+          <option value="FL">FLORIDA</option>
+          <option value="GA">GEORGIA</option>
+          <option value="GU">GUAM</option>
+          <option value="HI">HAWAII</option>
+          <option value="ID">IDAHO</option>
+          <option value="IL">ILLINOIS</option>
+          <option value="IN">INDIANA</option>
+          <option value="IA">IOWA</option>
+          <option value="KS">KANSAS</option>
+          <option value="KY">KENTUCKY</option>
+          <option value="LA">LOUISIANA</option>
+          <option value="ME">MAINE</option>
+          <option value="MD">MARYLAND</option>
+          <option value="MA">MASSACHUSETTS</option>
+          <option value="MI">MICHIGAN</option>
+          <option value="AE">MILITARY STATE</option>
+          <option value="MN">MINNESOTA</option>
+          <option value="MS">MISSISSIPPI</option>
+          <option value="MO">MISSOURI</option>
+          <option value="MT">MONTANA</option>
+          <option value="MP">N. MARIANA ISLANDS</option>
+          <option value="NE">NEBRASKA</option>
+          <option value="NV">NEVADA</option>
+          <option value="NH">NEW HAMPSHIRE</option>
+          <option value="NJ">NEW JERSEY</option>
+          <option value="NM">NEW MEXICO</option>
+          <option value="NY">NEW YORK</option>
+          <option value="NC">NORTH CAROLINA</option>
+          <option value="ND">NORTH DAKOTA</option>
+          <option value="OH">OHIO</option>
+          <option value="OK">OKLAHOMA</option>
+          <option value="OR">OREGON</option>
+          <option value="PA">PENNSYLVANIA</option>
+          <option value="PR">PUERTO RICO</option>
+          <option value="RI">RHODE ISLAND</option>
+          <option value="SC">SOUTH CAROLINA</option>
+          <option value="SD">SOUTH DAKOTA</option>
+          <option value="TN">TENNESSEE</option>
+          <option value="TX">TEXAS</option>
+          <option value="UT">UTAH</option>
+          <option value="VT">VERMONT</option>
+          <option value="VI">VIRGIN ISLANDS</option>
+          <option value="VA">VIRGINIA</option>
+          <option value="WA">WASHINGTON</option>
+          <option value="WV">WEST VIRGINIA</option>
+          <option value="WI">WISCONSIN</option>
+          <option value="WY">WYOMING</option>
+          <!----></select
+        ><br />
+        <label label-index="label-17" class="ole-ifta-label" for="zipCode0"
+          >ZIP Code
+        </label>
+        <input
+          input-index="input-151"
+          type="tel"
+          class="sinput-date-zip-phone field-type-zip ng-untouched ng-pristine ng-invalid"
+          id="zipCode0"
+          autocomplete="on"
+          aria-describedby="zipCode3"
+          required=""
+          minlength="5"
+          maxlength=""
+        /><br />
+        <label
+          label-index="label-24"
+          id="homephnnumLabel"
+          for="homephnnum"
+          aria-describedby="homephnnum"
+          class="ole-ifta-label"
+          >Main phone number
+        </label>
+        <input
+          input-index="input-10"
+          type="tel"
+          class="field-date-phone-zip field-type-phone ng-untouched ng-pristine ng-valid"
+          id="homephnnum"
+          autocomplete="on"
+          aria-describedby="homephnnum2"
+          minlength=""
+          maxlength=""
+        /><br />
+        <label
+          label-index="label-24"
+          id="mobilephnnumLabel"
+          for="mobilephnnum"
+          aria-describedby="mobilephnnum"
+          class="ole-ifta-label"
+          >Mobile phone number
+        </label>
+        <input
+          input-index="input-10"
+          type="tel"
+          class="field-date-phone-zip field-type-phone ng-untouched ng-pristine ng-valid"
+          id="mobilephnnum"
+          autocomplete="on"
+          aria-describedby="mobilephnnum2"
+          minlength=""
+          maxlength=""
+        /><br />
+        <label
+          id="gogreenlabel"
+          label-index="label-1"
+          class="ole-ifta-label"
+          for="emailAddressQuestion.emailAddress"
+          >Primary email address</label
+        >
+        <input
+          input-index="input-2"
+          type="text"
+          id="emailAddressQuestion.emailAddress"
+          autocomplete="on"
+          aria-describedby="emailAddress2"
+          class="field-type-open ng-untouched ng-pristine ng-valid"
+          minlength=""
+          maxlength="50"
+        /><br />
+      </div>
+    </div>
+  </body>
+</html>

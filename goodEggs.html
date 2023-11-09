@@ -1,0 +1,197 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>IOMD Testing Site</title>
+  <!-- Load external CSS styles -->
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <br /><br />
+  <h1>
+    <center>
+      <p class="center"><b>Good Eggs</b></p>
+    </center>
+  </h1>
+  <br />
+  <div id="goodeggs" class="field">
+    <div id="tab">
+      <div id="field">
+        <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'goodeggssignup')">
+          <h2><b>Sign Up</b></h2>
+        </button>
+
+        <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'goodeggssignin')">
+          <h2><b>Sign In</b></h2>
+        </button>
+
+        <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'checkout')">
+          <h2><b>Checkout</b></h2>
+        </button>
+
+        <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'goodeggspayment')">
+          <h2><b>Payment</b></h2>
+        </button>
+
+        <button class="subtab tablinks titlecontent" onclick="openSubComponent(event, 'forgotpassword')">
+          <h2><b>Forgot Password</b></h2>
+        </button>
+      </div>
+      <br />
+
+      <!----------------------------------Good Eggs Sign In-------------------------------------------->
+
+      <div id="goodeggssignin" class="sub-field" style="display: none">
+        <form class="sign-in-form" data-testid="sign-in-form">
+          <div class="sign-in-form__email-row">
+            <div class="sign-in-form__field">
+              <div class="sign-in-form__input-container">
+                <input type="email" class="form-control" name="email" value="" placeholder="Email" />
+              </div>
+            </div>
+          </div>
+          <div class="sign-in-form__password-row">
+            <div class="sign-in-form__field">
+              <div class="sign-in-form__input-container">
+                <input type="password" class="form-control" name="password" value="" placeholder="Password" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!---------------------------------Good Eggs Sign Up--------------------------------------------->
+
+      <div id="goodeggssignup" class="sub-field" style="display: none">
+        <form class="sign-up-form">
+          <div class="sign-up-form__first-name-column">
+            <div class="sign-up-form__field">
+              <input type="text" class="form-control" name="firstName" value="" placeholder="First Name" />
+            </div>
+          </div>
+
+          <div class="sign-up-form__last-name-column">
+            <div class="sign-up-form__field">
+              <input type="text" class="form-control" name="lastName" value="" placeholder="Last Name" />
+            </div>
+          </div>
+          <div class="sign-up-form__email-row">
+            <div class="sign-up-form__field">
+              <input type="email" class="form-control" name="email" value="" placeholder="Email" />
+            </div>
+          </div>
+          <div class="sign-up-form__password-row">
+            <div class="sign-up-form__field">
+              <input type="password" class="form-control" name="password" value="" placeholder="Password" />
+            </div>
+          </div>
+      </div>
+
+
+      <!----------------------------------Good Eggs Checkout------------------------------------------->
+
+      <div id="checkout" class="sub-field" style="display: none">
+
+        <form class="sign-up-form">
+          <div class="sign-up-form__first-name-column">
+            <div class="sign-up-form__field"><input class="form-control " name="firstName" placeholder="First Name"
+                type="text"></div>
+          </div>
+          <div class="sign-up-form__last-name-column">
+            <div class="sign-up-form__field"><input class="form-control " name="lastName" placeholder="Last Name"
+                type="text"></div>
+          </div>
+          <div class="sign-up-form__email-row">
+            <div class="sign-up-form__field"><input class="form-control " name="email" placeholder="Email" type="email"
+               ></div>
+          </div>
+          <div class="sign-up-form__phone-row">
+            <div class="sign-up-form__field"><input class="form-control invalid" name="phone"
+                placeholder="Phone (for delivery reminders)" type="tel">
+            </div>
+          </div>
+        </form>
+
+        <form class="delivery-address-form">
+          <div class="delivery-address-form__line-item">
+            <div class="delivery-address-form__gift-recipient-column">
+              <div class="delivery-address-form__edit-header">Recipient First and Last Name</div>
+              <div class="delivery-address-form__field"><input type="text" class="form-control"
+                  placeholder="Recipient's First and Last Name" data-testid="giftRecipientName" name="giftRecipientName"
+                  value=""></div>
+            </div>
+          </div>
+          <div class="delivery-address-form__line-item">
+            <div class="delivery-address-form__street-address-column">
+              <div class="delivery-address-form__edit-header">Street Address</div>
+              <div>
+                <div class="geosuggest">
+                  <div class="geosuggest__input-wrapper"><input class="geosuggest__input form-control"
+                      id="geosuggest__input" type="text" placeholder="Street Address" autocomplete="nope" tabindex="0"
+                      role="combobox" aria-expanded="false" aria-owns="geosuggest__list" value=""></div>
+                  <div class="geosuggest__suggests-wrapper">
+                    <ul class="geosuggest__suggests geosuggest__suggests--hidden" role="listbox" id="geosuggest__list">
+                    </ul>
+                  </div>
+                </div>
+                <div class="address-autocomplete-input__error"></div>
+              </div>
+            </div>
+          </div>
+          <div class="delivery-address-form__line-item">
+            <div class="delivery-address-form__gift-recipient-phone-column">
+              <div class="delivery-address-form__edit-header">Recipient Phone</div>
+              <div class="delivery-address-form__gift-recipient-phone-input"><input class="form-control" type="tel"
+                  placeholder="Recipient's Phone Number" data-testid="recipientPhoneNumber" name="giftRecipientPhone"
+                  value="">
+              </div>
+            </div>
+          </div>
+          <div class="delivery-address-form__line-item">
+            <div class="delivery-address-form__gift-recipient-email-column">
+              <div class="delivery-address-form__edit-header">Recipient Email</div>
+              <div class="delivery-address-form__gift-recipient-email-input"><input class="form-control" type="email"
+                  placeholder="Recipient's Email Address" name="giftRecipientEmail" value="">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <!---------------------------------Good Eggs Forgot Password------------------------------------->
+
+      <div id="forgotpassword" class="sub-field" style="display: none">
+        <form class="reset-password-page__form">
+          <div class="reset-password-page__form-row">
+            <input type="email"
+              class="form-control reset-password-page__form-row-input reset-password-page__form-row-input-email-address"
+              name="email" value="" placeholder="Email address" />
+          </div>
+        </form>
+      </div>
+
+      <!---------------------------------Good Eggs Payment--------------------------------------------->
+
+      <div id="goodeggspayment" class="sub-field" style="display: none">
+        <form>
+          <input autocomplete="cc-number" type="text" name="cardnumber" aria-label="Credit or debit card number"
+            placeholder="Card number" /><br />
+          <input autocomplete="cc-exp" type="text" name="exp-date" aria-label="Credit or debit card expiration date"
+            placeholder="MM / YY" /><br />
+          <input autocomplete="cc-csc" type="text" name="cvc" aria-label="Credit or debit card CVC/CVV"
+            placeholder="CVC" /><br />
+          <input autocomplete="postal-code" type="text" name="postal" aria-label="ZIP" placeholder="ZIP" /><br /><br />
+        </form>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
