@@ -30,7 +30,7 @@
                     <h2><b>Sign In</h2></b>
                 </button>
 
-               
+
 
                 <button class="subtab tablinks titlecontent"
                     onclick="openSubComponent(event, 'mylaporeexpressguestcheckout')">
@@ -47,7 +47,7 @@
                     <h2><b>Payment</h2></b>
                 </button>
 
-                
+
 
             </div>
 
@@ -76,8 +76,8 @@
                             <div class="form-group"><!--<label for="">Mobile Number</label> -->
                                 <div class=" react-tel-input ">
                                     <div class="special-label">Phone<input class="form-control "
-                                        placeholder="(xxx) xxx-xxxx" type="tel" value="+1">
-                                    <div class="flag-dropdown "></div>
+                                            placeholder="(xxx) xxx-xxxx" type="tel" value="+1">
+                                        <div class="flag-dropdown "></div>
                                         <div class="selected-flag" title="United States: + 1" tabindex="0" role="button"
                                             aria-haspopup="listbox">
                                             <div class="flag us">
@@ -176,14 +176,71 @@
 
             <div id="mylaporeexpresspayment" class="sub-field" style="display: none">
 
-                <input required="" autocomplete="cc-number" id="number" name="number" type="text"
+                <!-- <input required="" autocomplete="cc-number" id="number" name="number" type="text"
                     placeholder="Card number"><br>
                 <input required="" autocomplete="cc-name" id="name" name="name" type="text"
                     placeholder="Cardholder name"><br>
                 <input required="" autocomplete="cc-exp" id="expiry" name="expiry" type="text"
                     placeholder="Expiration date (MM / YY)"><br>
                 <input autocomplete="cc-csc" id="verification_value" name="verification_value" type="text"
+                    placeholder="Security code"><br><br> -->
+
+                    <!-- <h5 class="sub-head mt-4 mb-3"><b>DDDDDDD</b></h5> -->
+                    <input autocomplete="cc-csc" id="verification_value" name="verification_value" type="text"
                     placeholder="Security code"><br><br>
+
+                <div class="tab-pane active" role="tabpanel" id="tab-1">
+                    <div class="border-0 bg-none">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-12 payment-form-row">
+                                            <div class="form-group"><label for="">Debit / Credit card number</label>
+                                                <div id="number" class="payment-form-row" data-event="true"><iframe
+                                                        id="payFields-iframe-number"
+                                                     
+                                                        name="payFields_number" frameborder="0"
+                                                        style="display: block; height: 100%; width: 100%;"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 payment-form-row">
+                                            <div class="form-group"><label for="">Name</label>
+                                                <div id="name" class="payment-form-row" data-event="true"><iframe
+                                                        id="payFields-iframe-name"
+                                                     
+                                                        name="payFields_name" frameborder="0"
+                                                        style="display: block; height: 100%; width: 100%;"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 payment-form-row">
+                                            <div class="form-group"><label for="">Expiry date</label>
+                                                <div id="expiration" class="payment-form-row" data-event="true"><iframe
+                                                        id="payFields-iframe-expiration"
+                                                  
+                                                        name="payFields_expiration" frameborder="0"
+                                                        style="display: block; height: 100%; width: 100%;"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 payment-form-row">
+                                            <div class="form-group"><label for="">CVV</label>
+                                                <div id="cvv" class="payment-form-row" data-event="true"><iframe
+                                                        id="payFields-iframe-cvv"
+                                                     
+                                                        name="payFields_cvv" frameborder="0"
+                                                        style="display: block; height: 100%; width: 100%;"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -227,8 +284,7 @@
 
                 <div class=" react-tel-input ">
                     <div class="special-label">Phone
-                    <input class="form-control " placeholder="Enter phone number"
-                        type="tel" value="+1">
+                        <input class="form-control " placeholder="Enter phone number" type="tel" value="+1">
                     </div>
                 </div>
 
